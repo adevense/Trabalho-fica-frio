@@ -1,0 +1,191 @@
+:root {
+    --azul-principal: #007BFF;
+    --azul-gelo-escuro: #0B1930;
+    --azul-gelo: #004C99;
+    --ciano-claro: #49B6F3;
+    --cinza-fundo: #F8F9FA;
+    --gelo-light: #E9ECEF;
+    --gelo-dark: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cinza-fundo);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-primary { background-color: var(--azul-principal) !important; }
+.text-primary { color: var(--azul-principal) !important; }
+.bg-secondary { background-color: var(--ciano-claro) !important; }
+.text-secondary { color: var(--ciano-claro) !important; }
+.bg-gelo { background-color: var(--azul-gelo-escuro) !important; }
+.bg-gelo-light { background-color: var(--gelo-light) !important; }
+.bg-gelo-dark { background-color: var(--gelo-dark) !important; }
+.text-gelo-dark { color: var(--gelo-dark) !important; }
+.text-gelo { color: var(--azul-gelo) !important; }
+
+.navbar-brand:hover {
+    color: var(--ciano-claro) !important;
+}
+
+.hero-item {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+.hero-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-item .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+    padding-bottom: 0;
+}
+
+.hero-1 { 
+    background-image: url('images (4).jpeg'); 
+    background-position: center 40%;
+}
+.hero-2 { 
+    background-image: url('portaldoholanda-841935-imagem-foto-1amazonas.jpg');
+    background-position: center 30%;
+}
+.hero-3 { 
+    background-image: url('hq720.jpg');
+    background-position: center 50%;
+}
+
+.cta-banner-gelado {
+    background-image: url('images (3).jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 0;
+    position: relative;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.cta-banner-gelado::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(11, 25, 48, 0.7);
+    z-index: 1;
+}
+
+.cta-banner-gelado > * {
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--gelo-light);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.hero-sobre {
+    height: 400px;
+    background-size: cover;
+    background-position: center 80%;
+    background-image: url('images (4).jpeg');
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.img-perfil-gelado {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--ciano-claro);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta-servicos-gelado {
+    height: 300px;
+    background-image: url('portaldoholanda-841935-imagem-foto-1amazonas.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    position: relative;
+}
+
+.meme-spot {
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px auto;
+}
+
+.meme-fica-frio-ai {
+    background-image: url('images (1).jpeg');
+}
+
+.meme-simplesmente-gelado {
+    background-image: url('images (2).jpeg');
+}
+
+.cta-contato-gelado {
+    height: 400px;
+    background-image: url('hq720.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cta-contato-gelado::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1;
+}
+
+.cta-contato-gelado > * {
+    position: relative;
+    z-index: 2;
+}
+
+.erro-gelado {
+    background-color: var(--azul-gelo-escuro);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('jelado.webp');
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}

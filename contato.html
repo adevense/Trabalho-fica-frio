@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Fica Frio Plus Ultra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .fa-snowflake:before { content: "❄️"; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gelo sticky-top" aria-label="Menu principal de navegação">
+        <div class="container">
+            <a class="navbar-brand fw-bolder" href="index.html">
+                <span class="fa fa-snowflake" aria-hidden="true"></span> FICA FRIO | PLUS ULTRA!
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="clima.html">Clima Local</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contato.html" aria-current="page">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="cta-contato-gelado mb-5">
+        <div class="container text-white">
+            <h1 class="display-3 fw-bolder">Pronto Para o Gelado Plus Ultra?</h1>
+            <p class="lead">Entre em contato hoje e garanta o conforto térmico da sua casa ou empresa.</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="row">
+            <div class="col-lg-6 mb-5">
+                <h2 class="text-gelo-dark fw-bold mb-4">Agende Sua Visita Técnica</h2>
+                <form onsubmit="enviarFormulario(event)">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefone" class="form-label">Telefone (WhatsApp)</label>
+                        <input type="tel" class="form-control" id="telefone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="servico" class="form-label">Serviço Desejado</label>
+                        <select class="form-select" id="servico" required>
+                            <option selected disabled value="">Selecione um Serviço...</option>
+                            <option>Higienização Plus Ultra</option>
+                            <option>Instalação (Inverter/Split)</option>
+                            <option>Manutenção Corretiva (Urgente)</option>
+                            <option>PMOC Empresarial</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Descreva o Problema (Plus Ultra Detalhes)</label>
+                        <textarea class="form-control" id="mensagem" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary bg-gelo-dark btn-lg fw-bold w-100">
+                        <span class="fa fa-snowflake" aria-hidden="true"></span> ENVIAR PEDIDO DE GELO
+                    </button>
+                </form>
+            </div>
+
+            <div class="col-lg-6 mb-5">
+                <h2 class="text-gelo-dark fw-bold mb-4">Informações de Contato e Localização</h2>
+                
+                <div class="card p-4 bg-gelo-light shadow-sm mb-4">
+                    <h5 class="text-gelo fw-bold">Atendimento Rápido</h5>
+                    <p class="mb-1 fw-bold">Telefone/WhatsApp:</p>
+                    <p class="text-muted">(67) 99999-0000</p>
+                    <p class="mb-1 fw-bold">Email:</p>
+                    <p class="text-muted">contato@ficafrio.com.br</p>
+                    <p class="mb-1 fw-bold">Horário:</p>
+                    <p class="text-muted">Segunda a Sexta (8h às 18h) | Emergências 24h (Contrato PMOC)</p>
+                </div>
+
+                <h5 class="text-gelo fw-bold">Nossa Sede (Zona Gelada)</h5>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14902.13322045585!2d-51.7224285223381!3d-20.781358999863077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94840d270381e4b3%3A0x8e8316335198d022!2sTr%C3%AAs%20Lagoas%20-%20MS!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+                <p class="small text-muted mt-2">Rua da Inovação, 1001 - Três Lagoas/MS (Endereço fictício de referência)</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gelo text-white pt-5 pb-3 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-secondary fw-bolder">FICA FRIO | PLUS ULTRA</h5>
+                    <p class="small">A climatização levada ao máximo. **Seu Conforto é a Nossa Missão.**</p>
+                    <p class="small">Atendimento 24h para emergências (com contrato PMOC).</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5 class="fw-bold">Navegação</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="index.html" class="text-white text-decoration-none">Início</a></li>
+                        <li><a href="sobre.html" class="text-white text-decoration-none">Quem Somos</a></li>
+                        <li><a href="servicos.html" class="text-white text-decoration-none">Nossos Serviços</a></li>
+                        <li><a href="contato.html" class="text-white text-decoration-none">Agendamento</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold">Atendimento</h5>
+                     <ul class="list-unstyled small">
+                        <li>(67) 99999-0000 (Emergências)</li>
+                        <li>contato@ficafrio.com.br</li>
+                        <li>Rua da Inovação, 1001 - Região Sul</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold">Certificações</h5>
+                    <ul class="list-unstyled small">
+                        <li>CREA Ativo</li>
+                        <li>Certificação PMOC</li>
+                        <li>Especialização Inverter</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3 text-gelo-light">
+            <div class="text-center small">
+                <p class="mb-0">© 2024 Fica Frio Climatização Avançada. Todos os direitos reservados. | Tema: Gelado Plus Ultra.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

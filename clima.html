@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fica Frio - Clima Local (API Real)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .fa-snowflake:before { content: "❄️"; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gelo sticky-top" aria-label="Menu principal de navegação">
+        <div class="container">
+            <a class="navbar-brand fw-bolder" href="index.html">❄️ FICA FRIO | PLUS ULTRA!</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="clima.html" aria-current="page">Clima Local</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="text-center mb-4 display-4 text-gelo-dark fw-bolder">Termômetro PLUS ULTRA: Seu AC Aguenta?</h1>
+                <p class="text-center lead mb-4">Escolha sua região para ver a temperatura e receba um diagnóstico imediato.</p>
+
+                <div class="card shadow-lg p-4 mb-5 bg-gelo-light">
+                    <form id="form-clima" onsubmit="buscarClima(event)">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text bg-secondary text-white fw-bold" for="cidade-select">SELECIONE</label>
+                            <select class="form-select" id="cidade-select" required aria-label="Selecione a cidade para ver o clima">
+                            </select>
+                            <button class="btn btn-primary bg-gelo-dark fw-bold" type="submit" id="btn-buscar">
+                                ❄️ BUSCAR TEMPO
+                            </button>
+                        </div>
+                        <small class="form-text text-muted">Dados em tempo real da API Open-Meteo para justificar a manutenção.</small>
+                    </form>
+                </div>
+
+                <div id="resultado-clima" class="card shadow-lg p-5 d-none">
+                    <h2 class="text-center mb-4 text-gelo-dark">Condições Atuais em <span id="cidade-nome-display" class="text-secondary fw-bolder">...</span></h2>
+                    
+                    <div class="row text-center">
+                        <div class="col-md-6 mb-3">
+                            <div class="p-4 border rounded bg-white">
+                                <span class="display-6 text-primary">🌡️</span>
+                                <h4 class="text-gelo-dark fw-bolder mt-2" id="temp-atual">...</h4>
+                                <p class="mb-0 text-muted">Temperatura (°C)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="p-4 border rounded bg-white">
+                                <span class="display-6 text-primary">💨</span>
+                                <h4 class="text-gelo-dark fw-bolder mt-2" id="vento-atual">...</h4>
+                                <p class="mb-0 text-muted">Velocidade do Vento (km/h)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="alerta-clima" class="alert mt-4 d-none fw-bold" role="alert"></div>
+                </div>
+
+                <div id="erro-clima" class="alert alert-danger d-none mt-4" role="alert">
+                    Não foi possível buscar os dados do clima. Tente novamente mais tarde.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gelo text-white pt-5 pb-3 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-secondary fw-bolder">FICA FRIO | PLUS ULTRA</h5>
+                    <p class="small">A climatização levada ao máximo. **Seu Conforto é a Nossa Missão.**</p>
+                    <p class="small">Atendimento 24h para emergências (com contrato PMOC).</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5 class="fw-bold">Navegação</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="index.html" class="text-white text-decoration-none">Início</a></li>
+                        <li><a href="sobre.html" class="text-white text-decoration-none">Quem Somos</a></li>
+                        <li><a href="servicos.html" class="text-white text-decoration-none">Nossos Serviços</a></li>
+                        <li><a href="contato.html" class="text-white text-decoration-none">Agendamento</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold">Atendimento</h5>
+                     <ul class="list-unstyled small">
+                        <li>(67) 99999-0000 (Emergências)</li>
+                        <li>contato@ficafrio.com.br</li>
+                        <li>Rua da Inovação, 1001 - Região Sul</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold">Certificações</h5>
+                    <ul class="list-unstyled small">
+                        <li>CREA Ativo</li>
+                        <li>Certificação PMOC</li>
+                        <li>Especialização Inverter</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3 text-gelo-light">
+            <div class="text-center small">
+                <p class="mb-0">© 2024 Fica Frio Climatização Avançada. Todos os direitos reservados. | Tema: Gelado Plus Ultra.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        prepararClima(); 
+    </script>
+</body>
+</html>

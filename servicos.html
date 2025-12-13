@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços | Fica Frio Plus Ultra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .fa-snowflake:before { content: "❄️"; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gelo sticky-top" aria-label="Menu principal de navegação">
+        <div class="container">
+            <a class="navbar-brand fw-bolder" href="index.html">
+                <span class="fa fa-snowflake" aria-hidden="true"></span> FICA FRIO | PLUS ULTRA!
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="servicos.html" aria-current="page">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="clima.html">Clima Local</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <h1 class="text-center display-4 fw-bolder text-gelo-dark mb-5">Nosso Catálogo de Serviços PLUS ULTRA</h1>
+
+        <section class="cta-servicos-gelado rounded shadow-lg mb-5 d-flex align-items-center">
+            <div class="container">
+                <div class="row justify-content-start">
+                    <div class="col-md-6 p-4">
+                        <h2 class="text-white display-5 fw-bolder text-shadow-lg">Avançamos Onde Outros Param!</h2>
+                        <p class="lead text-white text-shadow-lg">Conheça o protocolo completo que garante economia e saúde.</p>
+                        <a href="contato.html" class="btn btn-secondary btn-lg fw-bold">PEÇA SEU ORÇAMENTO</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos-detalhes" class="mb-5">
+            <h3 class="text-gelo fw-bold mb-4">Pacotes FICA FRIO | Tecnologia Inverter</h3>
+            <div class="row" id="lista-servicos">
+            </div>
+        </section>
+
+        <section class="text-center py-5 bg-gelo-light rounded shadow-sm">
+            <h3 class="text-gelo-dark fw-bold mb-4">Nossa Filosofia Gelada (Fica Frio Aí!)</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="small text-muted">Quando o verão chega e o cliente não está preparado:</p>
+                    <div class="meme-spot meme-fica-frio-ai"></div>
+                </div>
+                <div class="col-md-6">
+                     <p class="small text-muted">Quando entregamos o serviço com 100% de eficiência:</p>
+                    <div class="meme-spot meme-simplesmente-gelado"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gelo text-white pt-5 pb-3 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-secondary fw-bolder">FICA FRIO | PLUS ULTRA</h5>
+                    <p class="small">A climatização levada ao máximo. **Seu Conforto é a Nossa Missão.**</p>
+                    <p class="small">Atendimento 24h para emergências (com contrato PMOC).</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5 class="fw-bold">Navegação</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="index.html" class="text-white text-decoration-none">Início</a></li>
+                        <li><a href="sobre.html" class="text-white text-decoration-none">Quem Somos</a></li>
+                        <li><a href="servicos.html" class="text-white text-decoration-none">Nossos Serviços</a></li>
+                        <li><a href="contato.html" class="text-white text-decoration-none">Agendamento</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold">Atendimento</h5>
+                     <ul class="list-unstyled small">
+                        <li>(67) 99999-0000 (Emergências)</li>
+                        <li>contato@ficafrio.com.br</li>
+                        <li>Rua da Inovação, 1001 - Região Sul</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold">Certificações</h5>
+                    <ul class="list-unstyled small">
+                        <li>CREA Ativo</li>
+                        <li>Certificação PMOC</li>
+                        <li>Especialização Inverter</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3 text-gelo-light">
+            <div class="text-center small">
+                <p class="mb-0">© 2024 Fica Frio Climatização Avançada. Todos os direitos reservados. | Tema: Gelado Plus Ultra.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        carregarServicos(); 
+    </script>
+</body>
+</html>

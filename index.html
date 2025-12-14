@@ -1,307 +1,600 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="icon" href="jelado-icon.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fica Frio | Manutenção PLUS ULTRA! Onde a Qualidade Vira Gelo!</title>
+    <title>Fica Frio | Operação Continental PLUS ULTRA - Soluções em Climatização</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        .fa-snowflake:before { content: "❄️"; }
-        .fa-handshake:before { content: "🤝"; }
-        .fa-bolt:before { content: "⚡"; }
-        .fa-thermometer-half:before { content: "🥵"; }
-        .fa-check-circle:before { content: "✅"; }
-        .fa-user-cog:before { content: "👨‍🔧"; }
-        .fa-leaf:before { content: "🍃"; }
-
-        .hero-vertical {
-            min-height: 90vh;
-            background-image: url('images (4).jpeg'); 
-            background-size: cover;
-            background-position: center 30%;
-            position: relative;
-            color: white;
-            padding-top: 150px;
-            padding-bottom: 50px;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        
+        .testimonial-carousel .carousel-item {
+            padding: 3rem;
         }
-
-        .hero-vertical::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1;
-        }
-
-        .hero-vertical > .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .cta-box-gelado {
-            background-color: var(--ciano-claro);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-            border: 3px solid white;
-        }
-
-        .painel-confianca {
-            background-color: var(--azul-gelo-escuro);
-            color: white;
-            padding: 30px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .problema-gelado {
-            border-left: 5px solid var(--ciano-claro);
+        .testimonial-carousel .blockquote {
+            font-size: 1.25rem;
+            border-left: 5px solid var(--ciano-neon);
             padding-left: 15px;
-            margin-bottom: 20px;
-            transition: all 0.3s;
         }
         
-        .problema-gelado:hover {
-            background-color: var(--gelo-light);
-            transform: translateX(5px);
+        .btn-suporte-garantia {
+            font-size: 1.25rem; 
+            background-color: transparent;
+            border: 3px solid var(--ciano-neon);
+            color: var(--ciano-neon);
+            transition: all 0.3s ease;
         }
-
-        .mapa-cobertura {
-            background-image: url('hq720.jpg');
-            background-size: cover;
-            background-position: center 80%;
-            padding: 100px 0;
-            position: relative;
+        .btn-suporte-garantia:hover {
+            background-color: var(--ciano-neon);
+            color: var(--azul-profundo) !important;
+            box-shadow: 0 0 20px rgba(0, 188, 212, 0.8);
+            border-color: var(--ciano-neon);
         }
-
-        .mapa-cobertura::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 76, 153, 0.85); /* Azul Gelo com opacidade */
-            z-index: 1;
-        }
-
-        .mapa-cobertura > * {
-            position: relative;
-            z-index: 2;
-        }
-
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gelo sticky-top" aria-label="Menu principal de navegação">
+
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <div class="ticker-item"><i class="fas fa-exclamation-triangle"></i> ALERTA DE CALOR EXTREMO PREVISTO PARA A PRÓXIMA SEMANA</div>
+            <div class="ticker-item"><i class="fas fa-snowflake"></i> AGENDA ABERTA PARA PMOC</div>
+            <div class="ticker-item"><i class="fas fa-bolt"></i> ECONOMIZE ATÉ 40% DE ENERGIA COM A LIMPEZA</div>
+            <div class="ticker-item"><i class="fas fa-phone"></i> PLANTÃO 24H ATIVO: (67) 99999-0000</div>
+            <div class="ticker-item"><i class="fas fa-certificate"></i> GARANTIA ESTENDIDA PARA CLIENTES COM PMOC</div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-premium fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bolder" href="index.html">
-                <span class="fa fa-snowflake" aria-hidden="true"></span> FICA FRIO | PLUS ULTRA!
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-snowflake text-ciano me-2"></i> FICA FRIO | <span class="text-ciano">PLUS ULTRA</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
-                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="clima.html">Clima Local</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-bold text-uppercase fs-6">
+                    <li class="nav-item"><a class="nav-link active" href="index.html"><span>Início</span></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="sobre.html"><span>O Mestre Jelado</span></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="servicos.html"><span>Arsenal Técnico</span></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="clima.html"><span>Urgência Climática</span></a></li>
+                    <li class="nav-item ms-3">
+                        <a href="contato.html" class="btn btn-outline-info rounded-0 fw-bold">ORÇAMENTO AGORA</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main>
-        <section class="hero-vertical">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7">
-                        <p class="mb-2 fw-bold text-secondary text-uppercase">NÃO ESPERE O CALOR EXTREMO</p>
-                        <h1 class="display-1 fw-bolder text-white">SEU AC TRAVOU NO 🥵 QUENTE?</h1>
-                        <h2 class="display-6 fw-light mb-4 text-gelo-light">Manutenção, Instalação e Limpeza Plus Ultra: A Única Com **6 Meses de Garantia** na Região.</h2>
-                        
-                        <a href="contato.html" class="btn btn-secondary btn-lg rounded-pill px-5 shadow-lg fw-bolder me-3 mb-3">
-                            FALAR COM TÉCNICO VIA WHATSAPP (Respostas em 5 min)
-                        </a>
-                        <p class="small fw-bold mt-2">Atendemos Residências, Comércio e Indústrias.</p>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="cta-box-gelado text-gelo-dark mt-4 mt-lg-0">
-                            <h4 class="text-center fw-bolder text-white mb-3">Orçamento Imediato e Gratuito</h4>
-                            <form>
-                                <input type="text" class="form-control mb-2" placeholder="Seu Nome" required>
-                                <input type="tel" class="form-control mb-2" placeholder="Seu WhatsApp (Urgente!)" required>
-                                <select class="form-select mb-3" required>
-                                    <option selected disabled>Qual o seu problema urgente?</option>
-                                    <option>Ar não gela / Gela pouco</option>
-                                    <option>Manutenção Preventiva / Limpeza</option>
-                                    <option>Instalação de Novo Aparelho</option>
-                                    <option>Orçamento PMOC</option>
-                                </select>
-                                <button type="submit" class="btn btn-primary bg-gelo-dark w-100 fw-bold btn-lg">
-                                    ❄️ QUERO MINHA CASA GELADA AGORA!
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="confianca" class="painel-confianca">
-            <div class="container text-center">
-                <h3 class="fw-bold text-secondary mb-3">MAIS DE 1.000 CLIENTES JÁ SENTIRAM O PODER DO GELO</h3>
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-md-2 col-4 mb-3 mb-md-0"><p class="mb-0 fw-bolder">CERTIFICAÇÃO PMOC</p></div>
-                    <div class="col-md-2 col-4 mb-3 mb-md-0"><p class="mb-0 fw-bolder">CREA ATIVO</p></div>
-                    <div class="col-md-2 col-4 mb-3 mb-md-0"><p class="mb-0 fw-bolder">10 ANOS DE MERCADO</p></div>
-                    <div class="col-md-2 col-4 mb-3 mb-md-0"><p class="mb-0 fw-bolder">ESPECIALISTAS INVERTER</p></div>
-                    <div class="col-md-2 col-4 mb-3 mb-md-0"><p class="mb-0 fw-bolder">5 ESTRELAS GOOGLE</p></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="dor" class="container py-5">
-            <h2 class="text-center mb-5 display-5 text-gelo-dark fw-bolder">Você Está Enfrentando Algum Desses 5 Problemas?</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card p-4 shadow-lg border-0">
-                        
-                        <div class="problema-gelado p-3">
-                            <h4 class="text-gelo fw-bold mb-1">1. O AR LIGA, MAS NÃO GELA NADA.</h4>
-                            <p class="text-muted small mb-0">90% dos casos é falta de gás devido a **micro-vazamentos**. Consertamos o vazamento primeiro, para depois recarregar. Garantia ZERO VAZAMENTO.</p>
-                        </div>
-
-                        <div class="problema-gelado p-3">
-                            <h4 class="text-gelo fw-bold mb-1">2. O CHEIRO DE MOFO DOMINOU O AMBIENTE.</h4>
-                            <p class="text-muted small mb-0">Isso é saúde em risco! Realizamos a **Higienização Química Certificada** (ANVISA) que elimina fungos, mofo e bactérias, purificando o ar.</p>
-                        </div>
-
-                         <div class="problema-gelado p-3">
-                            <h4 class="text-gelo fw-bold mb-1">3. A CONTA DE LUZ DOBROU ESTE MÊS.</h4>
-                            <p class="text-muted small mb-0">Compressor sujo ou defeituoso trabalha sem parar. Nossos técnicos ajustam o sistema Inverter para **máxima eficiência energética**.</p>
-                        </div>
-
-                        <div class="problema-gelado p-3">
-                            <h4 class="text-gelo fw-bold mb-1">4. ESTÁ PINGANDO ÁGUA DENTRO DE CASA.</h4>
-                            <p class="text-muted small mb-0">Dreno entupido ou bandeja suja e congelada. Limpeza de dreno profissional e desobstrução imediata, evitando danos estruturais.</p>
-                        </div>
-
-                         <div class="problema-gelado p-3">
-                            <h4 class="text-gelo fw-bold mb-1">5. INSTALAÇÃO NOVA, MAS O AR NÃO PRESTA.</h4>
-                            <p class="text-muted small mb-0">Instalação malfeita compromete a vida útil. Usamos **vácuo e ferramentas digitais** no padrão PLUS ULTRA para garantir a longevidade.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-5">
-                 <a href="contato.html" class="btn btn-secondary bg-primary fw-bolder btn-lg rounded-pill px-5 shadow-lg">
-                    ✅ SIM! ME AJUDE A RESOLVER ISSO AGORA!
-                </a>
-            </div>
-        </section>
-
-        <section class="p-4 cta-banner-gelado text-center text-white">
-            <div class="container">
-                 <h2 class="display-6 mb-3 fw-bolder">PARE DE JOGAR DINHEIRO FORA COM REPAROS FRACASSADOS!</h2>
-                 <p class="lead mb-0 fw-bold text-secondary">Nossos 6 meses de garantia são prova da nossa confiança no Protocolo PLUS ULTRA.</p>
-            </div>
-        </section>
-
-        <section id="protocolo" class="container py-5">
-            <h2 class="text-center mb-5 display-5 text-gelo-dark fw-bolder">O Protocolo de 7 Passos FICA FRIO | PLUS ULTRA</h2>
+    <header class="hero-base hero-overlay bg-hero-index">
+        <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 mb-4">
-                    <img src="images (3).jpeg" alt="Técnico Fica Frio trabalhando em manutenção Plus Ultra" class="img-fluid rounded shadow-lg border border-3 border-secondary">
+                <div class="col-lg-8">
+                    <div class="badge text-dark fw-bold mb-3 px-3 py-2" style="background-color: var(--ciano-neon);">MÉTODO EXCLUSIVO PLUS ULTRA</div>
+                    <h1 class="display-3 fw-bolder text-white mb-4" style="text-shadow: 2px 2px 10px black;">SEU AR CONDICIONADO É UMA BOMBA RELÓGIO?</h1>
+                    <p class="lead mb-5 text-white fs-4 fw-light">A falta de manutenção está queimando seu dinheiro e sua saúde. Atendemos Três Lagoas e Região com Engenharia de Precisão.</p>
+                    
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="servicos.html" class="btn btn-info btn-lg fw-bold px-5 py-4 rounded-0 shadow w-sm-100" style="background-color: var(--ciano-neon); border:none; color: var(--azul-profundo);">
+                            VER CATÁLOGO COMPLETO
+                        </a>
+                        <a href="#problema" class="btn btn-outline-light btn-lg fw-bold px-5 py-4 rounded-0 w-sm-100">
+                            ENTENDA O RISCO <i class="fas fa-arrow-down ms-2 text-ciano"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <p class="lead fw-bold text-gelo">Não é gambiarra. É Engenharia de Climatização Aplicada.</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item bg-white fw-bold"><span class="fa fa-check-circle me-2 text-primary"></span> 1. DIAGNÓSTICO DIGITAL: Identificação eletrônica de falhas.</li>
-                        <li class="list-group-item bg-white fw-bold"><span class="fa fa-check-circle me-2 text-primary"></span> 2. HIGIENIZAÇÃO ANVISA: Limpeza química profunda com laudo.</li>
-                        <li class="list-group-item bg-white fw-bold"><span class="fa fa-check-circle me-2 text-primary"></span> 3. REPARO DE VAZAMENTO: Busca ativa e soldagem profissional.</li>
-                        <li class="list-group-item bg-white fw-bold"><span class="fa fa-check-circle me-2 text-primary"></span> 4. VÁCUO OBRIGATÓRIO: Retirada de umidade antes da recarga.</li>
-                        <li class="list-group-item bg-white fw-bold"><span class="fa fa-check-circle me-2 text-primary"></span> 5. RECARGA PESADA: Uso de balança para precisão total do gás.</li>
-                        <li class="list-group-item bg-white fw-bold"><span class="fa fa-check-circle me-2 text-primary"></span> 6. TESTE DE EFICIÊNCIA: Medição da temperatura de saída do ar.</li>
-                        <li class="list-group-item bg-white fw-bold"><span class="fa fa-check-circle me-2 text-primary"></span> 7. RELATÓRIO TÉCNICO: Documentação para sua garantia de 6 meses.</li>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5 bg-azul-profundo border-bottom border-secondary">
+        <div class="container">
+            <div class="row text-center text-white g-4">
+                <div class="col-6 col-md-3">
+                    <h2 class="fw-bold text-ciano display-4">40%</h2>
+                    <p class="small text-uppercase ls-2">Aumento na Conta de Luz (Ar Sujo)</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="fw-bold text-ciano display-4">3500+</h2>
+                    <p class="small text-uppercase ls-2">Bactérias por m² no filtro</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="fw-bold text-ciano display-4">24h</h2>
+                    <p class="small text-uppercase ls-2">Atendimento Emergencial</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="fw-bold text-ciano display-4">100%</h2>
+                    <p class="small text-uppercase ls-2">Garantia Técnica</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="problema" class="py-5" style="background: linear-gradient(to bottom, var(--cinza-claro), var(--branco-gelo));">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-5 text-dark">A DIFERENÇA É INVISÍVEL... ATÉ A CONTA CHEGAR</h2>
+                <p class="lead text-muted">Veja o que estamos tirando de dentro dos aparelhos da sua vizinhança.</p>
+            </div>
+
+            <div class="row align-items-center g-0 shadow-lg rounded overflow-hidden position-relative">
+                 <div class="position-absolute d-none d-md-block" style="left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 10;">
+                    <i class="fas fa-arrow-alt-circle-right fa-3x text-info opacity-75"></i>
+                 </div>
+
+                <div class="col-md-6 bg-dark text-white p-5 text-center position-relative">
+                    <div class="badge bg-danger position-absolute top-0 start-0 m-3 p-2 fw-bold text-uppercase">ANTES (RISCO)</div>
+                    <i class="fas fa-biohazard fa-5x text-secondary mb-4"></i>
+                    <h3 class="fw-bold text-danger">AR CONTAMINADO</h3>
+                    <ul class="list-unstyled text-start mx-auto mt-4" style="max-width: 300px;">
+                        <li class="mb-2"><i class="fas fa-times-circle text-danger me-2"></i> Fungos e Ácaros ativos</li>
+                        <li class="mb-2"><i class="fas fa-times-circle text-danger me-2"></i> Consumo de energia altíssimo</li>
+                        <li class="mb-2"><i class="fas fa-times-circle text-danger me-2"></i> Risco de pane no compressor</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 p-5 text-center position-relative" style="background-color: var(--branco-gelo) !important;">
+                    <div class="badge bg-success position-absolute top-0 end-0 m-3 p-2 fw-bold text-uppercase">DEPOIS (PLUS ULTRA)</div>
+                    <i class="fas fa-wind fa-5x text-ciano mb-4"></i>
+                    <h3 class="fw-bold text-primary" style="color: var(--azul-profundo) !important;">AR PURO E GELADO</h3>
+                    <ul class="list-unstyled text-start mx-auto mt-4" style="max-width: 300px;">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Ambiente esterilizado e saudável</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Redução na conta de luz comprovada</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Vida útil prolongada e silenciosa</li>
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+    
+    <section class="py-5 bg-azul-royal text-white">
+        <div class="container py-4 text-center">
+            <i class="fas fa-shield-alt fa-4x text-ciano mb-3"></i>
+            <h2 class="fw-bold mb-3 text-ciano">NOSSA GARANTIA: SE NÃO GELAR, NADA SE PAGA!</h2>
+            <p class="lead opacity-75 mx-auto" style="max-width: 800px;">
+                Não prometemos apenas frio, prometemos o <strong>Frio Perfeito</strong>. Todos os nossos serviços são cobertos por uma garantia robusta. Se o problema persistir após nossa intervenção, retornamos imediatamente sem custos adicionais. Sua tranquilidade é nossa prioridade Plus Ultra.
+            </p>
+            <a href="contato.html" class="btn btn-lg mt-3 fw-bold px-5 py-3 rounded-0 d-block mx-auto btn-suporte-garantia" style="max-width: 350px;">
+                FALE COM O SUPORTE AGORA
+            </a>
+        </div>
+    </section>
 
-        <section class="mapa-cobertura text-white text-center">
-            <div class="container">
-                <h2 class="display-4 fw-bolder text-secondary mb-3">ATENDIMENTO ABRANGENTE NA REGIÃO!</h2>
-                <p class="lead fw-bold">Estamos prontos para atender sua residência ou empresa com agilidade.</p>
-                <div class="row justify-content-center mt-4">
-                     <div class="col-md-4 mb-3"><p class="p-2 border rounded fw-bold">CAPITAL E REGIÃO METROPOLITANA</p></div>
-                     <div class="col-md-4 mb-3"><p class="p-2 border rounded fw-bold">VALE DO TAQUARI</p></div>
-                     <div class="col-md-4 mb-3"><p class="p-2 border rounded fw-bold">BAIXADA CUIABANA (Emergências)</p></div>
+    <section class="py-5 bg-white border-bottom">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-5 text-azul-profundo">NOSSO COMPROMISSO É INEGOCIÁVEL</h2>
+                <p class="lead text-muted">A filosofia que nos eleva a um patamar Plus Ultra de serviço.</p>
+            </div>
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <i class="fas fa-rocket fa-4x text-ciano mb-3"></i>
+                    <h4 class="fw-bold text-azul-profundo">MISSÃO</h4>
+                    <p class="text-muted">Garantir ambientes climatizados com máxima eficiência energética, saúde e durabilidade, superando expectativas em cada atendimento.</p>
                 </div>
-                <a href="contato.html" class="btn btn-secondary btn-lg fw-bold rounded-pill px-5 mt-4">VERIFIQUE SUA ÁREA DE ATENDIMENTO</a>
+                <div class="col-md-4">
+                    <i class="fas fa-eye fa-4x text-azul-profundo mb-3"></i>
+                    <h4 class="fw-bold text-azul-profundo">VISÃO</h4>
+                    <p class="text-muted">Ser a referência em climatização de precisão na região Centro-Oeste, sinônimo de excelência técnica e confiança absoluta.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-hand-holding-usd fa-4x text-ciano mb-3"></i>
+                    <h4 class="fw-bold text-azul-profundo">VALORES</h4>
+                    <p class="text-muted">Integridade, Inovação, Responsabilidade Ambiental e Foco implacável na satisfação e segurança do cliente.</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="py-5 bg-gelo-light text-center">
-            <div class="container">
-                <h2 class="mb-3 display-4 fw-bolder text-gelo-dark">NÃO PASSE MAIS CALOR! SÓ O PLUS ULTRA RESOLVE.</h2>
-                <p class="lead mb-4 fw-bold">Garanta o agendamento antes que a próxima onda de calor sobrecarregue nossa agenda.</p>
-                <a href="contato.html" class="btn btn-primary bg-gelo fw-bolder btn-lg rounded-pill px-5 shadow-lg">
-                    ❄️ SOLICITAR MINHA VISITA TÉCNICA AGORA
-                </a>
+    <section class="hero-base hero-overlay bg-mapa-cobertura" style="min-height: 40vh;">
+        <div class="container py-5 text-center">
+            <h2 class="display-4 fw-bolder text-white mb-3" style="text-shadow: 2px 2px 10px black;">ATENDIMENTO COMPLETO NA REGIÃO</h2>
+            <p class="lead text-white opacity-75 mx-auto" style="max-width: 700px;">
+                Não importa se você está em Três Lagoas, Andradina, Brasilândia ou Água Clara. Nossa equipe móvel Plus Ultra está sempre pronta.
+            </p>
+            <i class="fas fa-map-marked-alt fa-3x text-ciano mt-3"></i>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="fw-bold text-center mb-5">O QUE PODEMOS FAZER HOJE?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="servicos.html#higienizacao" class="text-decoration-none">
+                        <div class="card h-100 border-0 bg-white p-4 text-center shadow-lg card-servico-plus">
+                            <div class="icon-circle mb-3 mx-auto" style="width: 70px; height: 70px; background-color: var(--ciano-neon); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-mask fa-2x text-dark"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark">Higienização Profunda</h4>
+                            <p class="text-muted small">Desinfecção de alto nível. Ar 100% livre de fungos e bactérias.</p>
+                            <span class="badge bg-dark text-ciano p-2 mt-2">Saúde Prioritária</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="servicos.html#corretiva" class="text-decoration-none">
+                        <div class="card h-100 border-0 bg-white p-4 text-center shadow-lg card-servico-plus">
+                            <div class="icon-circle mb-3 mx-auto" style="width: 70px; height: 70px; background-color: var(--azul-profundo); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-tools fa-2x text-ciano"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark">Manutenção Corretiva</h4>
+                            <p class="text-muted small">Resgate seu aparelho. Reparos rápidos e duráveis com garantia técnica.</p>
+                             <span class="badge bg-dark text-ciano p-2 mt-2">Emergência 24h</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="servicos.html#pmoc" class="text-decoration-none">
+                        <div class="card h-100 border-0 bg-white p-4 text-center shadow-lg card-servico-plus">
+                            <div class="icon-circle mb-3 mx-auto" style="width: 70px; height: 70px; background-color: var(--azul-royal); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-gavel fa-2x text-warning"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark">PMOC (Empresas)</h4>
+                            <p class="text-muted small">Regulamentação e contratos. Zero risco de multas da ANVISA.</p>
+                            <span class="badge bg-dark text-ciano p-2 mt-2">Laudo de Engenheiro</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 text-center mt-5">
+                    <a href="servicos.html" class="btn btn-dark px-5 py-3 fw-bold rounded-pill shadow-lg">VER LISTA COMPLETA DE SERVIÇOS</a>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="bg-gelo text-white pt-5 pb-3 mt-auto">
-        <div class="container">
+    <section class="py-5 bg-azul-profundo text-white">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <h2 class="fw-bold display-5 mb-4 text-ciano">A VANTAGEM TÉCNICA PLUS ULTRA</h2>
+                    <p class="lead fw-light opacity-85">
+                        Enquanto a maioria dos técnicos apenas "troca peças", nós diagnosticamos o sistema com a precisão de um engenheiro.
+                    </p>
+                    <ul class="list-unstyled mt-4 fs-5">
+                        <li class="mb-3"><i class="fas fa-microchip text-ciano me-3"></i> <strong>Foco em Inverter:</strong> Somos especialistas nos sistemas mais modernos e complexos (VRF, Multi-Split, Inverter).</li>
+                        <li class="mb-3"><i class="fas fa-thermometer-half text-ciano me-3"></i> <strong>Análise de Fluido Refrigerante:</strong> Usamos balança digital e analisadores de gás. Sem achismos, apenas dados exatos.</li>
+                        <li class="mb-3"><i class="fas fa-lightbulb text-ciano me-3"></i> <strong>Eficiência Energética:</strong> Nossos ajustes e limpezas são otimizados para maximizar a economia de energia do seu aparelho.</li>
+                    </ul>
+                    <a href="servicos.html" class="btn btn-outline-light mt-3 fw-bold px-4 py-2" style="color: var(--branco-gelo); border-color: var(--branco-gelo);">
+                        DETALHES DA EXECUÇÃO TÉCNICA
+                    </a>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <i class="fas fa-cogs fa-10x text-azul-royal opacity-50"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <img src="gelado-mask.jpeg" alt="Mestre Gelado e equipe" class="img-fluid rounded shadow-lg border border-5 border-info"> 
+                </div>
+                <div class="col-lg-7">
+                    <h2 class="fw-bold display-5 text-azul-profundo mb-4">NOSSA MISSÃO É MANTER SUA VIDA FUNCIONANDO</h2>
+                    <p class="lead text-muted">
+                        Para nós, climatização não é só sobre máquinas. É sobre a <strong>produtividade</strong> do seu negócio, o <strong>sono</strong> tranquilo da sua família e a <strong>saúde</strong> de quem você ama. Usamos tecnologia de ponta, mas nunca esquecemos o fator humano.
+                    </p>
+                    <ul class="list-unstyled mt-4 fs-5 text-dark">
+                        <li class="mb-2"><i class="fas fa-handshake text-success me-3"></i> Transparência Total: Orçamento sem surpresas.</li>
+                        <li class="mb-2"><i class="fas fa-clock text-info me-3"></i> Pontualidade: Seu tempo é tão valioso quanto o nosso.</li>
+                        <li class="mb-2"><i class="fas fa-users-cog text-primary me-3"></i> Equipe Certificada: Apenas técnicos treinados.</li>
+                    </ul>
+                    <a href="sobre.html" class="btn btn-outline-dark mt-4 fw-bold px-4 py-2">CONHEÇA O MESTRE GELADO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-azul-profundo text-white">
+        <div class="container py-5">
+            <h2 class="fw-bold text-center mb-5">COMO FUNCIONA O PROTOCOLO PLUS ULTRA</h2>
             <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="p-4 border border-info rounded step-card h-100">
+                        <span class="step-number">01</span>
+                        <i class="fas fa-comments fa-3x d-block text-center mb-3" style="color: var(--ciano-neon);"></i>
+                        <h4 class="fw-bold text-ciano mt-3">Contato Rápido</h4>
+                        <p class="opacity-75">Você chama no WhatsApp. Nossa IA ou atendente responde em minutos.</p>
+                    </div>
+                </div>
+                 <div class="col-md-3 mb-4">
+                    <div class="p-4 border border-info rounded step-card h-100">
+                        <span class="step-number">02</span>
+                        <i class="fas fa-search fa-3x d-block text-center mb-3" style="color: var(--ciano-neon);"></i>
+                        <h4 class="fw-bold text-ciano mt-3">Diagnóstico Preciso</h4>
+                        <p class="opacity-75">O técnico vai ao local. Avaliação precisa sem "chutômetro".</p>
+                    </div>
+                </div>
+                 <div class="col-md-3 mb-4">
+                    <div class="p-4 border border-info rounded step-card h-100">
+                        <span class="step-number">03</span>
+                        <i class="fas fa-toolbox fa-3x d-block text-center mb-3" style="color: var(--ciano-neon);"></i>
+                        <h4 class="fw-bold text-ciano mt-3">Execução Técnica</h4>
+                        <p class="opacity-75">Ferramentas de ponta, proteção do ambiente e limpeza total.</p>
+                    </div>
+                </div>
+                 <div class="col-md-3 mb-4">
+                    <div class="p-4 border border-info rounded step-card h-100">
+                        <span class="step-number">04</span>
+                        <i class="fas fa-smile-beam fa-3x d-block text-center mb-3" style="color: var(--ciano-neon);"></i>
+                        <h4 class="fw-bold text-ciano mt-3">Frio e Garantia</h4>
+                        <p class="opacity-75">Entregamos o laudo e garantimos o frio. Você volta a sorrir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold display-5 text-dark mb-4">RESPONSABILIDADE LEGAL E ECOLÓGICA</h2>
+                    <p class="lead text-muted">
+                        Nosso trabalho vai além de gelar. Assumimos um compromisso sério com a segurança de todos e com o planeta.
+                    </p>
+                    <ul class="list-unstyled mt-4 fs-5 text-dark">
+                        <li class="mb-3"><i class="fas fa-recycle text-success me-3"></i> <strong>Descarte Ecológico:</strong> Gerenciamento responsável dos resíduos químicos e filtragem de fluído refrigerante.</li>
+                        <li class="mb-3"><i class="fas fa-user-shield text-info me-3"></i> <strong>NR-35 e NR-10:</strong> Equipe com treinamento rigoroso para trabalho em altura e serviços elétricos. Zero acidentes.</li>
+                        <li class="mb-3"><i class="fas fa-file-invoice-dollar text-primary me-3"></i> <strong>Nota Fiscal e Garantia:</strong> Transparência fiscal e legal em 100% dos serviços prestados.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="fas fa-globe-americas fa-10x text-success opacity-50"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-warning">
+        <div class="container text-center">
+            <i class="fas fa-gavel fa-4x text-dark mb-4"></i>
+            <h2 class="fw-bold display-5 text-dark mb-3">SUA EMPRESA ESTÁ SUJEITA A MULTAS SALGADAS?</h2>
+            <p class="lead text-dark opacity-75 mx-auto" style="max-width: 900px;">
+                A Lei Federal 13.589 exige que edifícios de uso coletivo (comerciais, clínicas, escolas) possuam o <strong>PMOC (Plano de Manutenção, Operação e Controle)</strong>. Não se arrisque! Oferecemos contratos completos com emissão de ART e Laudo de Engenheiro.
+            </p>
+            <a href="contato.html" class="btn btn-danger btn-lg mt-4 fw-bold px-5 py-3 rounded-0 shadow">
+                <i class="fas fa-file-contract me-2"></i> REGULARIZE SEU PMOC AGORA!
+            </a>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <h2 class="fw-bold text-center mb-5">VOZES DO SUCESSO: QUEM JÁ É PLUS ULTRA</h2>
+            
+            <div id="testimonialCarousel" class="carousel slide bg-light rounded shadow-lg testimonial-carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0 text-dark">"A limpeza foi surreal. Achei que meu ar ia pifar, mas voltou a gelar como novo e a conta de luz caiu drasticamente. O profissionalismo na análise me surpreendeu. Recomendo o trabalho sério!"</p>
+                            <footer class="blockquote-footer mt-3">
+                                <i class="fas fa-user-circle me-1 text-ciano"></i> Marta R., <cite title="Source Title">Residencial Novo</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0 text-dark">"Contratamos o PMOC para a clínica. O laudo veio rápido, e a equipe é extremamente profissional. Totalmente dentro da lei agora e os aparelhos nunca funcionaram tão bem. Excelente investimento."</p>
+                            <footer class="blockquote-footer mt-3">
+                                <i class="fas fa-user-circle me-1 text-ciano"></i> Dr. Carlos P., <cite title="Source Title">Clínica Odontológica</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0 text-dark">"O atendimento 24h salvou nosso final de semana de pico! O técnico chegou em menos de 1 hora e resolveu o problema grave no compressor, evitando um prejuízo enorme. Nota 10 pela agilidade e competência!"</p>
+                            <footer class="blockquote-footer mt-3">
+                                <i class="fas fa-user-circle me-1 text-ciano"></i> João F., <cite title="Source Title">Proprietário de Hostel</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="fw-bold text-center mb-5">POR QUE ESCOLHER A FICA FRIO PLUS ULTRA?</h2>
+            <div class="table-responsive shadow-lg rounded">
+                <table class="table table-bordered table-striped text-center align-middle mb-0">
+                    <thead class="bg-azul-profundo text-white">
+                        <tr>
+                            <th scope="col" style="width: 30%;">Recurso</th>
+                            <th scope="col" style="width: 35%;">Técnico Comum</th>
+                            <th scope="col" style="width: 35%;" class="text-ciano">Fica Frio PLUS ULTRA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-start">Análise de Vazamento</th>
+                            <td class="text-danger"><i class="fas fa-times-circle me-2"></i> Água com Sabão</td>
+                            <td class="text-success fw-bold"><i class="fas fa-check-circle me-2"></i> Gás Nitrogênio (Teste de Estanqueidade)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Higienização</th>
+                            <td class="text-danger"><i class="fas fa-times-circle me-2"></i> Limpeza Superficial</td>
+                            <td class="text-success fw-bold"><i class="fas fa-check-circle me-2"></i> Higienização Química Biodegradável Completa</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Carga de Gás</th>
+                            <td class="text-danger"><i class="fas fa-times-circle me-2"></i> Carga "no olho"</td>
+                            <td class="text-success fw-bold"><i class="fas fa-check-circle me-2"></i> Balança Digital e Teste de Superaquecimento</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Certificação Empresarial</th>
+                            <td class="text-danger"><i class="fas fa-times-circle me-2"></i> Nenhuma ou Incompleta</td>
+                            <td class="text-success fw-bold"><i class="fas fa-check-circle me-2"></i> Emissão de Laudos ART e PMOC (Engenheiro)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-azul-royal text-white text-center">
+        <div class="container">
+            <h3 class="fw-bold mb-4 text-ciano">NOSSAS CERTIFICAÇÕES E AS MARCAS QUE CONFIAM EM NÓS</h3>
+            <p class="lead opacity-75 mx-auto mb-4" style="max-width: 700px;">
+                Técnicos treinados e certificados pelos principais fabricantes para garantir o uso de peças e protocolos originais.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 opacity-75">
+                <i class="fas fa-industry fa-4x text-white" title="Trane"></i>
+                <i class="fas fa-building fa-4x text-white" title="Gree"></i>
+                <i class="fas fa-gem fa-4x text-white" title="Fujitsu"></i>
+                <i class="fas fa-star fa-4x text-white" title="LG"></i>
+                <i class="fas fa-bolt fa-4x text-white" title="Carrier"></i>
+                <i class="fas fa-cogs fa-4x text-white" title="Samsung"></i>
+            </div>
+            <p class="mt-4 small opacity-50">E mais de 20 outras marcas atendidas com excelência.</p>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <h2 class="fw-bold text-center mb-5">PERGUNTAS RÁPIDAS (FAQ)</h2>
+            <div class="accordion" id="accordionFAQ">
+                <div class="accordion-item shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Qual o tempo médio de atendimento emergencial?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            Nosso protocolo Plus Ultra garante o deslocamento da equipe mais próxima em <strong>menos de 2 horas</strong> para a maioria das cidades da região (Três Lagoas, Brasilândia, Andradina) em casos de urgência.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            A limpeza de vocês faz sujeira no meu ambiente?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            Não! Usamos uma <strong>Manta de Proteção</strong> de alta performance que isola 100% o aparelho, garantindo que toda a água e sujeira sejam coletadas em um recipiente fechado. O ambiente fica limpo antes, durante e depois.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Vocês trabalham com todas as marcas (Carrier, LG, Samsung, etc.)?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            Sim. Nossa equipe é treinada para trabalhar com todas as marcas e modelos, desde Split Inverter de parede até sistemas VRF/Chiller industriais. Nosso Arsenal Técnico é universal.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            Quanto custa a Manutenção Preventiva Plus Ultra?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            Os valores variam conforme o tipo e potência do aparelho (BTUs). Nosso objetivo é que a economia de energia gerada pela limpeza pague o serviço! Peça um orçamento rápido via WhatsApp.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">NÃO SEJA PEGO DE SURPRESA</h2>
+            <p class="lead text-muted mb-4">Veja como está o clima na sua cidade agora e prepare-se.</p>
+            <a href="clima.html" class="btn btn-outline-primary btn-lg px-5 fw-bold" style="border-color: var(--azul-profundo); color: var(--azul-profundo);">ACESSAR SATÉLITE DE CLIMA <i class="fas fa-satellite-dish ms-2"></i></a>
+        </div>
+    </section>
+
+    <section class="py-5 bg-danger text-white text-center">
+        <div class="container">
+            <i class="fas fa-fire-alt fa-5x mb-3 text-warning"></i>
+            <h2 class="display-3 fw-bolder mb-3">ACEITE O DESAFIO DO FRIO PERFEITO!</h2>
+            <p class="lead fw-light mb-4">Se você já está sofrendo com o calor, o tempo acabou. Nosso Plantão 24h está pronto. Garantia de que seu problema será resolvido, ou o Mestre Gelado não cobra o serviço.</p>
+             <a href="https://wa.me/5567999999999" target="_blank" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow-lg">
+                <i class="fab fa-whatsapp me-2"></i> CHAMAR O PLANTÃO 24H
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer-premium pt-5 pb-3 mt-0">
+        <div class="container">
+            <div class="row text-start">
                 <div class="col-md-4 mb-4">
-                    <h5 class="text-secondary fw-bolder">FICA FRIO | PLUS ULTRA</h5>
-                    <p class="small">A climatização levada ao máximo. **Seu Conforto é a Nossa Missão.**</p>
-                    <p class="small">Atendimento 24h para emergências (com contrato PMOC).</p>
+                    <h5 class="text-ciano fw-bold">FICA FRIO | PLUS ULTRA</h5>
+                    <p class="small opacity-75">Soluções em Climatização de Precisão. Atendimento de Emergência 24h na região de Três Lagoas e cidades vizinhas.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white fw-bold">Navegação</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="servicos.html" class="small">Arsenal Técnico</a></li>
+                        <li><a href="sobre.html" class="small">Nossa História</a></li>
+                        <li><a href="clima.html" class="small">Urgência Climática</a></li>
+                        <li><a href="contato.html" class="small">Orçamento</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white fw-bold">Contato</h5>
+                    <ul class="list-unstyled small opacity-75">
+                        <li><i class="fas fa-phone-alt me-2 text-ciano"></i> (67) 99999-0000</li>
+                        <li><i class="fas fa-envelope me-2 text-ciano"></i> contato@ficafrio.com.br</li>
+                        <li><i class="fas fa-map-marker-alt me-2 text-ciano"></i> Três Lagoas - MS</li>
+                    </ul>
                 </div>
                 <div class="col-md-2 mb-4">
-                    <h5 class="fw-bold">Navegação</h5>
-                    <ul class="list-unstyled small">
-                        <li><a href="index.html" class="text-white text-decoration-none">Início</a></li>
-                        <li><a href="sobre.html" class="text-white text-decoration-none">Quem Somos</a></li>
-                        <li><a href="servicos.html" class="text-white text-decoration-none">Nossos Serviços</a></li>
-                        <li><a href="contato.html" class="text-white text-decoration-none">Agendamento</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h5 class="fw-bold">Atendimento</h5>
-                     <ul class="list-unstyled small">
-                        <li>(67) 99999-0000 (Emergências)</li>
-                        <li>contato@ficafrio.com.br</li>
-                        <li>Rua da Inovação, 1001 - Região Sul</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h5 class="fw-bold">Certificações</h5>
-                    <ul class="list-unstyled small">
-                        <li>CREA Ativo</li>
-                        <li>Certificação PMOC</li>
-                        <li>Especialização Inverter</li>
-                    </ul>
+                    <h5 class="text-white fw-bold">Social</h5>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/5567999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
             </div>
-            <hr class="my-3 text-gelo-light">
-            <div class="text-center small">
-                <p class="mb-0">© 2024 Fica Frio Climatização Avançada. Todos os direitos reservados. | Tema: Gelado Plus Ultra.</p>
+            <div class="mt-4 border-top pt-3">
+                <p class="small opacity-50">&copy; 2025 Fica Frio Climatização. Operação Continental Plus Ultra. Desenvolvido com <i class="fas fa-heart text-danger"></i>.</p>
             </div>
         </div>
     </footer>
 
+    <a href="https://wa.me/5567999999999" class="btn-zap-flutuante" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
 </body>
 </html>

@@ -1,24 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="icon" href="jelado-icon.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erro 404 - Cadê o Gelado?</title>
+    <title>ERRO 404 | Falha Crítica de Climatização</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
     <style>
-        .fa-snowflake:before { content: "❄️"; }
+        :root {
+            --alerta-fogo: #cc0000;
+            --azul-profundo: #001f3f;
+            --azul-royal: #003366;
+            --ciano-neon: #00ffff;
+        }
+
+
+        .bg-azul-profundo { background-color: var(--azul-profundo); }
+        .text-ciano { color: var(--ciano-neon) !important; }
+        .text-alerta { color: var(--alerta-fogo) !important; }
+        .btn-ciano { background-color: var(--ciano-neon) !important; color: #000 !important;}
+
+
+        .ticker-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            background-color: #ffc107;
+            color: #000;
+            height: 35px;
+            line-height: 35px;
+            z-index: 1050;
+        }
+        .ticker-move {
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .ticker-item {
+            display: inline-block;
+            padding: 0 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .navbar-premium {
+            top: 35px;
+        }
+
+
+        .page-404 {
+            min-height: 80vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #f8f9fa; 
+        }
+        .codigo-erro {
+            font-size: 10rem;
+            font-weight: 900;
+            line-height: 1;
+            color: var(--azul-profundo);
+            text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+        }
+        .bloco-alerta {
+            border-left: 5px solid var(--alerta-fogo);
+            background-color: #ffebe8;
+            padding: 20px;
+            margin-top: 30px;
+            color: #333;
+        }
     </style>
 </head>
-<body class="erro-gelado">
-    <div class="container text-center">
-        <h1 class="display-1 fw-bolder text-secondary">404</h1>
-        <h2 class="mb-4">OPERAÇÃO PLUS ULTRA FALHOU! </h2>
-        <p class="lead mb-5">Essa página congelou ou se desintegrou. O Gelado não a encontrou, mas podemos te levar de volta ao conforto.</p>
-        
-        <a href="index.html" class="btn btn-secondary btn-lg fw-bold rounded-pill px-5">
-            <span class="fa fa-snowflake" aria-hidden="true"></span> VOLTAR PARA A ZONA GELADA
-        </a> 
+<body>
+
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <div class="ticker-item"><i class="fas fa-exclamation-triangle"></i> CUIDADO: O CALOR ESTÁ ACIMA DE 30°C. AUMENTO NA DEMANDA DE PMOC.</div>
+            <div class="ticker-item"><i class="fas fa-snowflake"></i> RECUPERAÇÃO DE EFICIÊNCIA COMPROVADA: SISTEMAS A/C AGORA <b>EM ALTO DESEMPENHO</b>.</div>
+            <div class="ticker-item"><i class="fas fa-bolt"></i> EVITE O <b>CUSTO EXTRA</b>: AGENDE SUA MANUTENÇÃO PREVENTIVA.</div>
+            <div class="ticker-item"><i class="fas fa-phone"></i> PLANTÃO TÁTICO 24H ATIVO: (67) 99999-0000. <b>URGÊNCIA É PRIORIDADE</b>!</div>
+        </div>
     </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-premium fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-snowflake text-ciano me-2"></i> FICA FRIO | <span class="text-ciano">PLUS ULTRA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-bold text-uppercase fs-6">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">O Mestre Gelado</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Arsenal Técnico</a></li>
+                    <li class="nav-item"><a class="nav-link" href="clima.html">Urgência Climática</a></li>
+                    <li class="nav-item ms-3">
+                        <a href="contato.html" class="btn btn-outline-info rounded-0 fw-bold px-4">ORÇAMENTO AGORA</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-404">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    
+                    <h1 class="codigo-erro">404</h1>
+                    
+                    <h2 class="display-5 text-alerta mt-3 mb-4 fw-bold">
+                        <i class="fas fa-skull-crossbones me-2"></i> Falha Crítica de Conexão!
+                    </h2>
+                    
+                    <p class="lead text-muted">A página que você procurava sofreu um "Congelamento Total" e não pôde ser carregada. <br>É provável que a URL esteja incorreta ou a página tenha sido removida.</p>
+
+                    <div class="bloco-alerta shadow-sm">
+                        <p class="mb-0">
+                            <strong>Diagnóstico Rápido:</strong> O sistema falhou ao encontrar o recurso solicitado. <br>Por favor, verifique o endereço digitado ou utilize os botões abaixo para retornar à segurança.
+                        </p>
+                    </div>
+
+                    <div class="mt-5 d-grid gap-2 d-md-flex justify-content-center">
+                        <a href="index.html" class="btn btn-ciano btn-lg fw-bold px-5">
+                            <i class="fas fa-home me-2"></i> Voltar à Central de Comando
+                        </a>
+                        <a href="contato.html" class="btn btn-outline-secondary btn-lg fw-bold px-5">
+                            <i class="fas fa-headset me-2"></i> Chamar Suporte Técnico
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-premium pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="text-center small opacity-50">
+                &copy; 2025 Fica Frio Climatização. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5567999999999" class="btn-zap-flutuante" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

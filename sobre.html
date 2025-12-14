@@ -1,121 +1,256 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="icon" href="jelado-icon.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós | Fica Frio Plus Ultra</title>
+    <title>Sobre Nós | A Lenda do Mestre Jelado - Fica Frio Plus Ultra</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .fa-snowflake:before { content: "❄️"; }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gelo sticky-top" aria-label="Menu principal de navegação">
+
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <div class="ticker-item"><i class="fas fa-exclamation-triangle"></i> ALERTA DE CALOR EXTREMO PREVISTO PARA A PRÓXIMA SEMANA</div>
+            <div class="ticker-item"><i class="fas fa-snowflake"></i> AGENDA ABERTA PARA PMOC</div>
+            <div class="ticker-item"><i class="fas fa-bolt"></i> ECONOMIZE ATÉ 40% DE ENERGIA COM A LIMPEZA</div>
+            <div class="ticker-item"><i class="fas fa-phone"></i> PLANTÃO 24H ATIVO: (67) 99999-0000</div>
+            <div class="ticker-item"><i class="fas fa-certificate"></i> GARANTIA ESTENDIDA PARA CLIENTES COM PMOC</div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-premium fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bolder" href="index.html">
-                <span class="fa fa-snowflake" aria-hidden="true"></span> FICA FRIO | PLUS ULTRA!
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-snowflake text-ciano me-2"></i> FICA FRIO | <span class="text-ciano">PLUS ULTRA</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="sobre.html" aria-current="page">Sobre Nós</a></li>
-                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="clima.html">Clima Local</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-bold text-uppercase fs-6">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html"><span>Início</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="sobre.html"><span>O Mestre Jelado</span></a></li> 
+                    <li class="nav-item"><a class="nav-link text-white" href="servicos.html"><span>Arsenal Técnico</span></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="clima.html"><span>Urgência Climática</span></a></li>
+                    <li class="nav-item ms-3">
+                        <a href="contato.html" class="btn btn-outline-info rounded-0 fw-bold">ORÇAMENTO AGORA</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-sobre d-flex align-items-center mb-5">
-        <div class="container text-white text-center">
-            <h1 class="display-3 fw-bolder">Nossa História: O Poder do Gelo</h1>
-            <p class="lead">De um pequeno reparo a uma força de climatização Plus Ultra!</p>
+    <header class="hero-base hero-overlay bg-hero-sobre-v2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 text-center">
+                    <div class="badge text-dark fw-bold mb-3 px-3 py-2 bg-ciano-neon">PADRÃO BEYOND PLUS ULTRA</div>
+                    <h1 class="display-1 fw-bolder text-white mb-4 text-shadow-heavy">A LENDÁRIA HISTÓRIA DO ENGENHEIRO LÚCIO BEST</h1>
+                    <p class="lead mb-5 text-white fs-4 fw-light opacity-90">O fundador que transformou a manutenção de ar-condicionado em uma ciência de precisão contra o calor extremo.</p>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="container py-5">
-        <div class="row">
-            <div class="col-md-8">
-                <h2 class="text-gelo-dark fw-bold mb-4">A Jornada do FICA FRIO</h2>
-                <p>Nascemos do desejo de ir além do comum em serviços de ar condicionado. Percebemos que o mercado estava cheio de soluções temporárias e caras. Assim, em 2010, fundamos a Fica Frio com a missão de trazer **soluções permanentes**, econômicas e com foco total na qualidade do ar que você respira.</p>
-                
-                <h3 class="text-gelo fw-bold mt-5 mb-3">Nossa Liderança: O Mestre Gelado</h3>
-                <div class="d-flex align-items-center mb-4 p-3 bg-gelo-light rounded shadow-sm">
-                    <img src="images (3).jpeg" alt="Lucius Best (Gelado)" class="img-perfil-gelado me-4">
-                    <div>
-                        <h4 class="mb-0 text-gelo-dark">Lucius Best (CEO)</h4>
-                        <p class="text-muted small">"Não é sobre fazer o trabalho; é sobre fazer o trabalho Plus Ultra."</p>
-                        <p class="mt-2">Lucius é o visionário por trás da metodologia **Zero Vazamento** e **Ar Puro Garantido**. Sua experiência em superação de crises (climáticas, claro) garante que nossa equipe esteja sempre um passo à frente do calor.</p>
+    <section class="py-5 bg-branco-gelo">
+        <div class="container py-5">
+            <h2 class="fw-bold text-center mb-5 display-5 text-azul-profundo">A DOUTRINA DO FRIO PERFEITO</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="card bg-azul-profundo text-white p-4 shadow-lg card-bio-profile">
+                        <img src="gelado-face.jpeg" alt="Lúcio Best (Jelado) - Fundador da Fica Frio" class="img-fluid rounded-circle mx-auto mb-3 border border-3 border-ciano-neon img-profile-lg">
+                        <h4 class="text-center text-ciano fw-bold">Lúcio Best</h4>
+                        <p class="text-center small text-warning">Engenheiro Mecânico e Climático (CREA: XXXXXX)</p>
+                        <p class="text-center small opacity-75">"Onde está meu super-traje? Precisão. Disciplina. Confiança. Essa é a base do Frio Perfeito."</p>
+                        <a href="contato.html" class="btn btn-sm btn-outline-info mt-3 fw-bold">SOLICITAR CONSULTORIA</a>
                     </div>
                 </div>
-
-                <h3 class="text-gelo fw-bold mt-5 mb-3">O Que Nos Move?</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item bg-white">❄️ **Excelência Técnica:** Foco em Inverter e aparelhos de alta performance.</li>
-                    <li class="list-group-item bg-white">❄️ **Transparência:** Orçamentos detalhados e sem surpresas.</li>
-                    <li class="list-group-item bg-white">❄️ **Saúde:** Higienização certificada para eliminar fungos e bactérias.</li>
-                </ul>
-            </div>
-            
-            <div class="col-md-4">
-                <aside class="sticky-top" style="top: 20px;">
-                    <div class="card p-4 bg-gelo-dark text-white shadow">
-                        <h4 class="text-secondary fw-bold">Por Que Plus Ultra?</h4>
-                        <p class="small">Adotamos a mentalidade de ir **além** do que é esperado. Para nós, um serviço só é completo quando o cliente sente o verdadeiro poder do GELO.</p>
-                        <a href="contato.html" class="btn btn-secondary mt-3 fw-bold">Fale com o CEO</a>
+                <div class="col-lg-7">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="pilar-card">
+                                <i class="fas fa-user-tie pilar-icon text-ciano"></i>
+                                <h5 class="fw-bold text-azul-profundo">Missão: Restauração Tática</h5>
+                                <p class="small">Restaurar a climatização para o pico de eficiência, garantindo ar puro e economia energética para enfrentar o clima do MS.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="pilar-card">
+                                <i class="fas fa-drafting-compass pilar-icon text-ciano"></i>
+                                <h5 class="fw-bold text-azul-profundo">Visão: Padrão Global</h5>
+                                <p class="small">Ser o padrão de excelência em serviços de climatização, onde a palavra "gambiarras" é banida, seguindo a Regra de Edna Mode: <strong>"NADA DE CAPAS!"</strong> (ou seja, nada de atalhos).</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="pilar-card p-4">
+                                <i class="fas fa-balance-scale pilar-icon text-warning"></i>
+                                <h5 class="fw-bold text-azul-profundo">Valor: Integridade Científica</h5>
+                                <p class="small mb-0">Cada diagnóstico é embasado em dados (pressão, vácuo, temperatura) e nunca em "achismo". Usamos ferramentas calibradas para eliminar o erro humano. A única garantia que precisamos é a precisão do nosso trabalho.</p>
+                            </div>
+                        </div>
                     </div>
-                </aside>
+                </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="bg-gelo text-white pt-5 pb-3 mt-auto">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5 class="text-secondary fw-bolder">FICA FRIO | PLUS ULTRA</h5>
-                    <p class="small">A climatização levada ao máximo. **Seu Conforto é a Nossa Missão.**</p>
-                    <p class="small">Atendimento 24h para emergências (com contrato PMOC).</p>
-                </div>
-                <div class="col-md-2 mb-4">
-                    <h5 class="fw-bold">Navegação</h5>
-                    <ul class="list-unstyled small">
-                        <li><a href="index.html" class="text-white text-decoration-none">Início</a></li>
-                        <li><a href="sobre.html" class="text-white text-decoration-none">Quem Somos</a></li>
-                        <li><a href="servicos.html" class="text-white text-decoration-none">Nossos Serviços</a></li>
-                        <li><a href="contato.html" class="text-white text-decoration-none">Agendamento</a></li>
+    <section class="py-5 bg-azul-profundo text-white">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="fw-bolder display-6 mb-4 text-ciano">A DIFERENÇA ENTRE O TÉCNICO E O ENGENHEIRO</h3>
+                    <p class="lead opacity-90">
+                        O Mestre Jelado não é apenas um técnico. Ele é um Engenheiro Mecânico certificado, o que significa que ele entende a <strong>Termodinâmica Pura</strong>, o cálculo de carga térmica, e a mecânica dos fluidos.
+                    </p>
+                    <ul class="list-unstyled mt-4 text-branco-gelo">
+                        <li class="mb-3"><i class="fas fa-file-signature me-2 text-warning"></i> <strong>ART do CREA:</strong> Responsabilidade civil e técnica assinada, eliminando riscos legais para o cliente.</li>
+                        <li class="mb-3"><i class="fas fa-calculator me-2 text-warning"></i> <strong>Cálculo Preciso:</strong> Capacidade de dimensionar o BTU exato para o seu ambiente, eliminando desperdício e subdimensionamento.</li>
+                        <li class="mb-3"><i class="fas fa-cogs me-2 text-warning"></i> <strong>Gestão de Ciclo:</strong> Foco em otimizar o ciclo de refrigeração para máxima eficiência e vida útil, não apenas "colocar gás".</li>
                     </ul>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <h5 class="fw-bold">Atendimento</h5>
-                     <ul class="list-unstyled small">
-                        <li>(67) 99999-0000 (Emergências)</li>
-                        <li>contato@ficafrio.com.br</li>
-                        <li>Rua da Inovação, 1001 - Região Sul</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h5 class="fw-bold">Certificações</h5>
-                    <ul class="list-unstyled small">
-                        <li>CREA Ativo</li>
-                        <li>Certificação PMOC</li>
-                        <li>Especialização Inverter</li>
-                    </ul>
+                <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                    <img src="prancha-jelada.jpeg" alt="Imagem Ilustrativa de Ferramentas de Engenharia" class="img-fluid rounded shadow-lg border border-3 border-warning">
                 </div>
             </div>
-            <hr class="my-3 text-gelo-light">
-            <div class="text-center small">
-                <p class="mb-0">© 2024 Fica Frio Climatização Avançada. Todos os direitos reservados. | Tema: Gelado Plus Ultra.</p>
+        </div>
+    </section>
+
+    <section class="py-5 bg-branco-gelo">
+        <div class="container py-5">
+            <h2 class="fw-bold text-center mb-5 text-azul-profundo display-5">A JORNADA ÉPICA: DE ENGENHEIRO À LENDA</h2>
+            <div class="timeline-container">
+                <div class="timeline-item-v2 left">
+                    <div class="timeline-content bg-dark text-white">
+                        <span class="small text-warning">1995 | A Origem</span>
+                        <h5 class="fw-bold text-ciano">Fundamentos e Graduação</h5>
+                        <p class="small">Formação em Engenharia Mecânica. Tese pioneira sobre a otimização de sistemas de refrigeração para climas continentais. O futuro Mestre Jelado ganha suas primeiras credenciais.</p>
+                    </div>
+                </div>
+                <div class="timeline-item-v2 right">
+                    <div class="timeline-content bg-dark text-white">
+                        <span class="small text-warning">2005-2017 | Treinamento Avançado</span>
+                        <h5 class="fw-bold text-ciano">Especialização VRF e Termodinâmica Global</h5>
+                        <p class="small">Lúcio trabalha em projetos industriais complexos na Europa e Ásia, absorvendo o rigor internacional de manutenção, gestão de projetos PMOC e controle de qualidade do ar.</p>
+                    </div>
+                </div>
+                <div class="timeline-item-v2 left">
+                    <div class="timeline-content bg-dark text-white">
+                        <span class="small text-warning">2018 | O Início da Fica Frio</span>
+                        <h5 class="fw-bold text-ciano">A Revolução Contra o Amadorismo</h5>
+                        <p class="small">Funda a Fica Frio em Três Lagoas com a promessa de nunca usar achismos e sempre entregar Laudo Técnico. O slogan interno era: "Vamos ser melhores que o Capitão Frio!"</p>
+                    </div>
+                </div>
+                <div class="timeline-item-v2 right">
+                    <div class="timeline-content bg-dark text-white">
+                        <span class="small text-warning">2020 | A Consolidação Legal</span>
+                        <h5 class="fw-bold text-ciano">PMOC e Laudo de Engenharia Padrão</h5>
+                        <p class="small">A Fica Frio passa a ser referência em PMOC (Lei 13.589/17), com emissão de ART e relatórios mensais de engenheiro, transformando o "serviço" em "conformidade legal e segurança".</p>
+                    </div>
+                </div>
+                <div class="timeline-item-v2 left">
+                    <div class="timeline-content bg-dark text-white">
+                        <span class="small text-warning">2023 | O Arsenal Tático</span>
+                        <h5 class="fw-bold text-ciano">Investimento Plus Ultra em Ferramental</h5>
+                        <p class="small">Aquisição do Arsenal Técnico: Manifold Digital, Vacuômetro Eletrônico e Termovisor FLIR. O erro humano foi eliminado. A prova que o Mestre Jelado leva a sério.</p>
+                    </div>
+                </div>
+                <div class="timeline-item-v2 right">
+                    <div class="timeline-content bg-dark text-white">
+                        <span class="small text-warning">2024 | O Padrão Ouro</span>
+                        <h5 class="fw-bold text-ciano">Lançamento da Operação PLUS ULTRA</h5>
+                        <p class="small">Formalização da garantia definitiva: **"Se Não Gelar, Nada se Paga"** e expansão do Plantão 24h. O inimigo (calor) não tem descanso, nós também não.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-azul-royal text-white">
+        <div class="container py-5">
+            <h2 class="fw-bold text-center mb-5 text-warning display-5">A VOZ DO MERCADO: RECONHECIMENTO PLUS ULTRA</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="depoimento-card bg-azul-profundo p-4 rounded shadow-lg">
+                        <i class="fas fa-quote-left fa-2x mb-3 text-ciano"></i>
+                        <p>"Eu pensava que todos os técnicos eram iguais. Mas a Fica Frio usa equipamentos que nem a NASA tem! O Lúcio não conserta, ele *restaura o equilíbrio* do sistema. Gosto da seriedade. Nota 10!"</p>
+                        <footer class="blockquote-footer mt-3 text-branco-gelo">
+                            <cite title="Source Title">S. Rick, Proprietário de Rede Hoteleira</cite>
+                        </footer>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="depoimento-card bg-azul-profundo p-4 rounded shadow-lg">
+                        <i class="fas fa-quote-left fa-2x mb-3 text-ciano"></i>
+                        <p>"O Mestre Jelado conseguiu resolver um problema de vazamento que três outras empresas disseram ser 'impossível'. Ele chegou, olhou e disse: 'Ah, esse é fácil. É só o dreno entupido.' Quase chorei de alívio. Meu super-herói do clima!"</p>
+                        <footer class="blockquote-footer mt-3 text-branco-gelo">
+                            <cite title="Source Title">J. Kent, Gestor de Logística</cite>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-cta-sobre-final text-white">
+        <div class="container text-center py-5 hero-overlay-light">
+            <h2 class="display-3 fw-bolder mb-3 text-warning">PRONTOS PARA A GUERRA CONTRA O CALOR?</h2>
+            <p class="lead fw-light mb-4 text-branco-gelo opacity-95 mx-auto" style="max-width: 900px;">
+                Se você busca apenas um "conserto", ligue para outro. Se você busca o rigor científico, a garantia da engenharia e a paz de espírito, o Mestre Jelado é a sua única opção Plus Ultra.
+            </p>
+             <a href="contato.html" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow-lg mt-3">
+                <i class="fas fa-handshake me-2"></i> CONTRATE A AUTORIDADE
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer-premium pt-5 pb-3 mt-0">
+        <div class="container">
+            <div class="row text-start">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-ciano fw-bold">FICA FRIO | PLUS ULTRA</h5>
+                    <p class="small opacity-75">Soluções em Climatização de Precisão. Atendimento de Emergência 24h na região de Três Lagoas e cidades vizinhas.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white fw-bold">Navegação</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="servicos.html" class="small">Arsenal Técnico</a></li>
+                        <li><a href="sobre.html" class="small">Nossa História</a></li>
+                        <li><a href="clima.html" class="small">Urgência Climática</a></li>
+                        <li><a href="contato.html" class="small">Orçamento</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white fw-bold">Contato</h5>
+                    <ul class="list-unstyled small opacity-75">
+                        <li><i class="fas fa-phone-alt me-2 text-ciano"></i> (67) 99999-0000</li>
+                        <li><i class="fas fa-envelope me-2 text-ciano"></i> contato@ficafrio.com.br</li>
+                        <li><i class="fas fa-map-marker-alt me-2 text-ciano"></i> Três Lagoas - MS</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5 class="text-white fw-bold">Social</h5>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/5567999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 border-top pt-3">
+                <p class="small opacity-50">&copy; 2025 Fica Frio Climatização. Operação Continental Plus Ultra. Desenvolvido com <i class="fas fa-heart text-danger"></i>.</p>
             </div>
         </div>
     </footer>
 
+    <a href="https://wa.me/5567999999999" class="btn-zap-flutuante" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
 </body>
 </html>

@@ -1,117 +1,484 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="icon" href="jelado-icon.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços | Fica Frio Plus Ultra</title>
+    <title>60 Pontos Táticos | Fica Frio - Arsenal de Engenharia (V13.0)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
     <style>
-        .fa-snowflake:before { content: "❄️"; }
+        
+        .service-protocol-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .service-protocol-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .service-protocol-list li::before {
+            content: "\f058"; 
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--ciano-neon);
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        .service-protocol-topic {
+            font-weight: bold;
+            color: var(--azul-profundo);
+            display: block;
+            margin-bottom: 5px;
+        }
+        .service-protocol-subtitle {
+            font-size: 1.25rem;
+            color: var(--warning);
+            border-bottom: 1px solid var(--warning);
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .hero-base {
+            background-size: cover;
+            background-position: center 30%; 
+            padding-top: 150px;
+            padding-bottom: 100px;
+            min-height: 60vh;
+        }
+        .bg-hero-servicos {
+           
+            background-image: url('fica-frio.jpeg'); 
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 50, 0.75); 
+        }
+        
+        
+        .tab-content {
+            border-radius: 8px; 
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gelo sticky-top" aria-label="Menu principal de navegação">
+
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <div class="ticker-item"><i class="fas fa-exclamation-triangle"></i> CUIDADO: O CALOR ESTÁ ACIMA DE 35°C. AUMENTO NA DEMANDA DE PMOC.</div>
+            <div class="ticker-item"><i class="fas fa-snowflake"></i> RECUPERAÇÃO DE EFICIÊNCIA COMPROVADA: SISTEMAS A/C AGORA PLUS ULTRA.</div>
+            <div class="ticker-item"><i class="fas fa-bolt"></i> EVITE O **VILÃO DA CONTA ALTA**: AGENDE SUA MANUTENÇÃO PREVENTIVA.</div>
+            <div class="ticker-item"><i class="fas fa-phone"></i> PLANTÃO TÁTICO 24H ATIVO: (67) 99999-0000. EMERGÊNCIA É MISSÃO!</div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-premium fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bolder" href="index.html">
-                <span class="fa fa-snowflake" aria-hidden="true"></span> FICA FRIO | PLUS ULTRA!
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-snowflake text-ciano me-2"></i> FICA FRIO | <span class="text-ciano">PLUS ULTRA</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="servicos.html" aria-current="page">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="clima.html">Clima Local</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-bold text-uppercase fs-6">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html"><span>Início</span></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="sobre.html"><span>O Mestre Jelado</span></a></li> 
+                    <li class="nav-item"><a class="nav-link active" href="servicos.html"><span>Arsenal Técnico</span></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="clima.html"><span>Urgência Climática</span></a></li>
+                    <li class="nav-item ms-3">
+                        <a href="contato.html" class="btn btn-outline-info rounded-0 fw-bold">ORÇAMENTO AGORA</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main class="container py-5">
-        <h1 class="text-center display-4 fw-bolder text-gelo-dark mb-5">Nosso Catálogo de Serviços PLUS ULTRA</h1>
+    <header class="hero-base bg-hero-servicos hero-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="display-1 fw-bolder mb-4 text-white text-shadow-dark">
+                        60 PONTOS TÁTICOS. 100% DE EFICIÊNCIA GARANTIDA.
+                    </h1>
+                    <p class="lead mb-4 text-branco-gelo fs-4 fw-light opacity-90">
+                        Cada serviço é uma missão detalhada. Conheça nossa Matriz de 60 Pontos de Engenharia de Precisão, organizados em 4 Protocolos Fundamentais.
+                    </p>
+                    <a href="#servicos-tabs" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-0 shadow-lg mt-3">
+                        <i class="fas fa-microchip me-2"></i> EXPLORE A MATRIZ COMPLETA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-        <section class="cta-servicos-gelado rounded shadow-lg mb-5 d-flex align-items-center">
-            <div class="container">
-                <div class="row justify-content-start">
-                    <div class="col-md-6 p-4">
-                        <h2 class="text-white display-5 fw-bolder text-shadow-lg">Avançamos Onde Outros Param!</h2>
-                        <p class="lead text-white text-shadow-lg">Conheça o protocolo completo que garante economia e saúde.</p>
-                        <a href="contato.html" class="btn btn-secondary btn-lg fw-bold">PEÇA SEU ORÇAMENTO</a>
+    <section class="py-5 bg-branco-gelo" id="servicos-tabs">
+        <div class="container py-5">
+            <h2 class="text-center fw-bolder mb-5 display-5 text-azul-profundo">OS 4 PROTOCOLOS PLUS ULTRA EM DETALHE</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <ul class="nav nav-tabs nav-justified mb-4 services-tabs-premium" id="serviceTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active fw-bold" id="pmoc-tab" data-bs-toggle="tab" data-bs-target="#pmoc-content" type="button" role="tab"><i class="fas fa-file-signature me-2"></i> 1. PMOC & CONFORMIDADE (8 PONTOS)</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-bold" id="instalacao-tab" data-bs-toggle="tab" data-bs-target="#instalacao-content" type="button" role="tab"><i class="fas fa-tools me-2"></i> 2. INSTALAÇÃO CIENTÍFICA (12 PONTOS)</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-bold" id="preventiva-tab" data-bs-toggle="tab" data-bs-target="#preventiva-content" type="button" role="tab"><i class="fas fa-hand-holding-box me-2"></i> 3. MANUTENÇÃO OTIMIZADA (20 PONTOS)</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-bold" id="reparo-tab" data-bs-toggle="tab" data-bs-target="#reparo-content" type="button" role="tab"><i class="fas fa-search-plus me-2"></i> 4. REPARO AVANÇADO (20 PONTOS)</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content shadow-lg p-5 bg-white border border-info" id="serviceTabContent">
+                        
+                        <div class="tab-pane fade show active" id="pmoc-content" role="tabpanel">
+                            <h3 class="fw-bolder text-ciano mb-4 display-6">PROTOCOLO 1: PMOC, A BLINDAGEM LEGAL E SANITÁRIA (8 PONTOS)</h3>
+                            
+                            <p class="lead fs-5">
+                                **Obrigatoriedade e Saúde:** O cumprimento da Lei Federal 13.589/17 é a base. Nosso PMOC não apenas cumpre a legislação, mas assegura a saúde do ar, protegendo sua empresa de multas e riscos de interdição pela Vigilância Sanitária.
+                            </p>
+                            
+                            <h4 class="service-protocol-subtitle"><i class="fas fa-gavel me-2"></i> Detalhamento dos 8 Pontos Táticos de Conformidade</h4>
+                            <ul class="service-protocol-list">
+                                <li>
+                                    <span class="service-protocol-topic">1. Elaboração do Plano PMOC:</span> Documento completo e personalizado, mapeando todos os sistemas de climatização.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">2. Emissão de ART (CREA):</span> Anotação de Responsabilidade Técnica assinada por Engenheiro Mecânico habilitado.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">3. Laudo de Qualidade do Ar:</span> Análise laboratorial especializada para ambientes críticos, comprovando padrões sanitários.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">4. Cronograma de Manutenção Detalhado:</span> Definição de frequências (Mensal/Bimestral/Trimestral) baseada no uso e tipo de equipamento.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">5. Fichas de Registro de Execução:</span> Documentação de cada intervenção para auditoria e transparência.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">6. Consultoria para Adequação Sanitária:</span> Suporte para atender todas as exigências da Vigilância Sanitária local.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">7. Treinamento de Operação:</span> Instrução para operadores internos sobre os procedimentos de controle e registro.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">8. Atualização Legal Anual:</span> Revisão e ajustes documentais conforme alterações nas normas técnicas da ABNT NBR 16401.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-pane fade" id="instalacao-content" role="tabpanel">
+                            <h3 class="fw-bolder text-ciano mb-4 display-6">PROTOCOLO 2: INSTALAÇÃO CIENTÍFICA, A GARANTIA DE DURAÇÃO (12 PONTOS)</h3>
+                            
+                            <p class="lead fs-5">
+                                **O Perigo da Instalação "Rápida":** Uma instalação que não remove 100% da umidade ou erra na carga do fluido está fadada a quebrar. Aplicamos 12 pontos de engenharia para assegurar a vida útil máxima do compressor e eficiência imediata.
+                            </p>
+
+                            <h4 class="service-protocol-subtitle"><i class="fas fa-flask me-2"></i> Detalhamento dos 12 Pontos Táticos de Instalação</h4>
+                            <ul class="service-protocol-list">
+                                <li>
+                                    <span class="service-protocol-topic">9. Cálculo de Carga Térmica Preciso:</span> Dimensionamento rigoroso do BTU/h conforme ABNT NBR 16401 para evitar subdimensionamento.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">10. Vácuo Ultra Profundo com Vacuômetro Digital:</span> Remoção total de contaminantes, atingindo obrigatoriamente abaixo de **500 microns ($< 500 \mu$m)**.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">11. Teste de Estanqueidade com Nitrogênio:</span> Pressurização da linha para identificar microvazamentos antes da introdução do fluido.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">12. Carga de Fluido Exata por Peso:</span> Utilização de Balança Digital para recarga conforme especificação do fabricante (Lei da Massa).
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">13. Teste Elétrico de Tensão e Corrente:</span> Medição na partida e operação para evitar sobrecarga ou baixa potência.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">14. Verificação de Superaquecimento (SH):</span> Ajuste fino para compressores fixos e garantia de retorno de gás ideal.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">15. Verificação de Sub-resfriamento (SC):</span> Ajuste fino para sistemas com Válvula de Expansão e líquido 100% no condensador.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">16. Isolamento Térmico Profissional:</span> Uso de material de célula fechada para prevenir condensação e perda de rendimento.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">17. Dreno Otimizado:</span> Teste de escoamento, inclinação correta e vedação para evitar vazamentos internos.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">18. Fixação da Unidade Externa Antivibração:</span> Nivelamento e uso de amortecedores para prolongar a vida útil do compressor e reduzir ruído.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">19. Relatório de Comissionamento Técnico:</span> Documentação das medições (Vácuo, Carga, SH/SC) pós-instalação.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">20. Teste de Vazamento em Conexões (Flare):</span> Uso de Detector Eletrônico em cada ponto de conexão para segurança extra.
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="preventiva-content" role="tabpanel">
+                            <h3 class="fw-bolder text-ciano mb-4 display-6">PROTOCOLO 3: MANUTENÇÃO OTIMIZADA, FOCO EM ECONOMIA (20 PONTOS)</h3>
+                            
+                            <p class="lead fs-5">
+                                **Otimização = Economia:** Nossa preventiva vai além da limpeza. É um ajuste fino periódico do sistema, focado em restaurar o desempenho de fábrica, que se traduz em menos estresse para o equipamento e uma redução verificável na conta de energia.
+                            </p>
+
+                            <h4 class="service-protocol-subtitle"><i class="fas fa-chart-line me-2"></i> Detalhamento dos 20 Pontos de Manutenção</h4>
+                            <ul class="service-protocol-list">
+                                <li>
+                                    <span class="service-protocol-topic">21. Limpeza Química de Serpentinas (Evaporadora):</span> Desincrustação e higienização profunda do trocador de calor.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">22. Limpeza Química de Serpentinas (Condensadora):</span> Remoção de pó e sujeira para maximizar a troca térmica.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">23. Higienização da Bandeja de Drenagem:</span> Limpeza e desinfecção contra formação de lodo e bactérias.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">24. Limpeza do Rolo Ventilador (Blower):</span> Desmontagem e limpeza das pás para fluxo de ar máximo.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">25. Troca/Limpeza de Filtros:</span> Conforme saturação, para manter a qualidade do ar.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">26. Medição do Delta T:</span> Verificação da diferença de temperatura de sopro e retorno.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">27. Teste de Superaquecimento (SH):</span> Medição para confirmar que o sistema está no ponto ideal de expansão.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">28. Teste de Sub-resfriamento (SC):</span> Medição para otimizar o condensador.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">29. Medição de Corrente Elétrica (FLA):</span> Comparação do consumo atual com a carga total nominal (FLA).
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">30. Medição de Capacitância de Motor/Compressor:</span> Teste da saúde dos capacitores (Microfarad) para evitar falhas de partida.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">31. Inspeção de Contatores/Bornes:</span> Reaperto e limpeza para evitar aquecimento e falhas elétricas.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">32. Inspeção e Limpeza da Hélice (Condensadora):</span> Garantia de fluxo de ar eficiente na unidade externa.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">33. Uso de Câmera Termográfica:</span> Inspeção preditiva para localizar pontos de calor anormais.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">34. Teste da Bomba de Drenagem:</span> Verificação de sistemas Cassete/Piso-Teto com drenagem forçada.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">35. Verificação de Vibração e Ruído:</span> Ajuste de suportes e isoladores acústicos.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">36. Calibração de Termostato/Sensores:</span> Teste de precisão da leitura de temperatura ambiente.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">37. Aplicação de Bactericida/Fungicida:</span> Produtos homologados para desinfecção.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">38. Relatório Fotográfico Detalhado:</span> Antes e Depois da Limpeza e dos testes técnicos.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">39. Teste de Pressão de Operação:</span> Verificação de Pressão de Sucção/Descarga (complementar ao SH/SC).
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">40. Inspeção de Vedação e Isolamento de Dutos:</span> Busca por perdas de ar em sistemas centrais.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-pane fade" id="reparo-content" role="tabpanel">
+                            <h3 class="fw-bolder text-ciano mb-4 display-6">PROTOCOLO 4: REPARO AVANÇADO, A SOLUÇÃO DE ENGENHARIA (20 PONTOS)</h3>
+                            
+                            <p class="lead fs-5">
+                                **Reparo Definitivo, Não Paliativo:** Nosso protocolo de reparo é uma intervenção cirúrgica focada em eliminar a causa raiz da falha, garantindo que o ciclo termodinâmico seja restaurado à perfeição, sem vazamentos futuros ou contaminação.
+                            </p>
+
+                            <h4 class="service-protocol-subtitle"><i class="fas fa-cogs me-2"></i> Detalhamento dos 20 Pontos de Reparo e Diagnóstico</h4>
+                            <ul class="service-protocol-list">
+                                <li>
+                                    <span class="service-protocol-topic">41. Diagnóstico de Vazamento com Detector Eletrônico:</span> Localização precisa de perdas de fluido, mesmo as menores.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">42. Injeção de Contraste UV (Quando Necessário):</span> Rastreamento de vazamentos complexos em áreas de difícil acesso.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">43. Soldagem de Linha com Nitrogênio:</span> Reparo da tubulação de cobre com solda prata, evitando a formação de óxido interno.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">44. Substituição de Compressor:</span> Execução completa com protocolo de limpeza de linha e Vácuo Ultra Profundo.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">45. Troca de Óleo do Compressor:</span> Em casos de contaminação por umidade ou acidez (teste de acidez).
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">46. Instalação de Filtro Secador:</span> Proteção obrigatória do sistema após reparos que expuseram a linha.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">47. Desobstrução de Capilar/Válvula de Expansão:</span> Uso de nitrogênio ou solventes para restaurar o fluxo de fluido.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">48. Reparo/Troca de Placa Eletrônica Principal:</span> Diagnóstico e substituição de placas Inverter, VRF ou convencionais.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">49. Reparo/Troca de Placa Inverter (IPM):</span> Manutenção especializada em sistemas de velocidade variável e módulos de potência.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">50. Reparo de Sensores de Temperatura/Degelo:</span> Troca e calibração de termistores (Poço e Serpentina).
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">51. Diagnóstico Avançado de Sistemas VRF/VRV:</span> Análise de códigos de erro, comunicação e endereçamento de módulos.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">52. Recarga de Fluido Refrigerante por Peso:</span> Aplicação de R32, R410A, R22, etc., medida com balança digital.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">53. Medição de Pressão com Manifold Digital:</span> Leituras precisas de Sucção e Descarga para análise do ciclo.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">54. Flushing (Limpeza Interna de Linha):</span> Remoção de resíduos e óleo queimado para prevenir falhas futuras.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">55. Recuperação de Fluido Refrigerante:</span> Uso de Recicladora para descarte ou reutilização responsável.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">56. Reparo/Troca de Motor Ventilador (Evaporadora):</span> Solução de ruídos, vibração e fluxo de ar insuficiente.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">57. Reparo/Troca de Motor Ventilador (Condensadora):</span> Garantia de troca de calor eficiente na unidade externa.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">58. Teste de Resistência de Isolamento (Megôhmetro):</span> Prevenção de curto-circuito e falhas no isolamento do compressor.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">59. Diagnóstico de Vazamento em Duto:</span> Uso de anemômetro para identificar perdas em sistemas dutados.
+                                </li>
+                                <li>
+                                    <span class="service-protocol-topic">60. Balanceamento de Fluxo de Ar:</span> Ajuste do volume de ar nas saídas (insuflamento) e retornos do sistema.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="servicos-detalhes" class="mb-5">
-            <h3 class="text-gelo fw-bold mb-4">Pacotes FICA FRIO | Tecnologia Inverter</h3>
-            <div class="row" id="lista-servicos">
-            </div>
-        </section>
-
-        <section class="text-center py-5 bg-gelo-light rounded shadow-sm">
-            <h3 class="text-gelo-dark fw-bold mb-4">Nossa Filosofia Gelada (Fica Frio Aí!)</h3>
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="small text-muted">Quando o verão chega e o cliente não está preparado:</p>
-                    <div class="meme-spot meme-fica-frio-ai"></div>
+    <section class="py-5 bg-azul-profundo text-white">
+        <div class="container py-5">
+            <h2 class="text-center fw-bolder mb-5 display-5 text-warning">O ARSENAL DE DIAGNÓSTICO (O PODER DA CIÊNCIA)</h2>
+            <div class="row g-4 text-center">
+                
+                <div class="col-md-3">
+                    <div class="arsenal-item arsenal-item-focus p-4 rounded shadow-lg">
+                        <i class="fas fa-thermometer-half fa-3x text-ciano mb-3"></i>
+                        <h5 class="fw-bold">Câmera Termográfica</h5>
+                        <p class="small opacity-75">Vê o calor invisível. Identifica falhas de isolamento, vazamentos de ar e superaquecimento de componentes elétricos e compressores.</p>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                     <p class="small text-muted">Quando entregamos o serviço com 100% de eficiência:</p>
-                    <div class="meme-spot meme-simplesmente-gelado"></div>
+                
+                <div class="col-md-3">
+                    <div class="arsenal-item p-4 rounded shadow-lg">
+                        <i class="fas fa-tachometer-alt fa-3x text-warning mb-3"></i>
+                        <h5 class="fw-bold">Vacuômetro Digital</h5>
+                        <p class="small opacity-75">Mede o vácuo em microns (unidade de precisão). Garante a eliminação total de umidade e contaminantes antes da recarga (abaixo de 500 $\mu$m).</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
+                
+                <div class="col-md-3">
+                    <div class="arsenal-item p-4 rounded shadow-lg">
+                        <i class="fas fa-drafting-compass fa-3x text-ciano mb-3"></i>
+                        <h5 class="fw-bold">Manifold Digital</h5>
+                        <p class="small opacity-75">Substitui o manômetro analógico. Fornece leituras de pressão, temperatura e cálculos automáticos de Superaquecimento/Sub-resfriamento (SH/SC).</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="arsenal-item arsenal-item-focus p-4 rounded shadow-lg">
+                        <i class="fas fa-weight-hanging fa-3x text-warning mb-3"></i>
+                        <h5 class="fw-bold">Balança Digital</h5>
+                        <p class="small opacity-75">Recarrega o gás com a massa (peso) exata de fábrica. Essencial para atingir o pico de eficiência energética e o mínimo de consumo.</p>
+                    </div>
+                </div>
 
-    <footer class="bg-gelo text-white pt-5 pb-3 mt-auto">
+            </div>
+            <div class="text-center mt-5">
+                <a href="contato.html" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-0 shadow-lg">
+                    <i class="fas fa-headset me-2"></i> FALE COM O ENGENHEIRO
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-azul-profundo text-white">
+        <div class="container text-center">
+            <h3 class="fw-bolder mb-4 display-5 text-warning">
+                PARE DE JOGAR DINHEIRO NO LIXO!
+            </h3>
+            <p class="lead mb-4 fw-light fs-4">
+                Seu técnico não usa Balança Digital? Não mede Vácuo em Microns? **Ele está roubando sua economia e a vida útil do seu equipamento.**
+            </p>
+            <p class="lead mb-5 fw-bold text-branco-gelo">
+                Exija Engenharia. Exija o Protocolo Plus Ultra.
+            </p>
+            <a href="contato.html" class="btn btn-warning btn-lg fw-bolder px-5 py-3 rounded-0 mt-3 shadow-lg text-uppercase">
+                <i class="fas fa-bolt me-2"></i> RESGATE SUA EFICIÊNCIA AGORA!
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer-premium pt-5 pb-3 mt-0">
         <div class="container">
-            <div class="row">
+            <div class="row text-start">
                 <div class="col-md-4 mb-4">
-                    <h5 class="text-secondary fw-bolder">FICA FRIO | PLUS ULTRA</h5>
-                    <p class="small">A climatização levada ao máximo. **Seu Conforto é a Nossa Missão.**</p>
-                    <p class="small">Atendimento 24h para emergências (com contrato PMOC).</p>
+                    <h5 class="text-ciano fw-bold">FICA FRIO | PLUS ULTRA</h5>
+                    <p class="small opacity-75">Soluções em Climatização de Precisão. Atendimento de Emergência 24h na região de Três Lagoas e cidades vizinhas.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white fw-bold">Navegação</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="servicos.html" class="small">Arsenal Técnico</a></li>
+                        <li><a href="sobre.html" class="small">O Dossiê Secreto</a></li>
+                        <li><a href="clima.html" class="small">Urgência Climática</a></li>
+                        <li><a href="contato.html" class="small">Orçamento</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white fw-bold">Contato</h5>
+                    <ul class="list-unstyled small opacity-75">
+                        <li><i class="fas fa-phone-alt me-2 text-ciano"></i> (67) 99999-0000</li>
+                        <li><i class="fas fa-envelope me-2 text-ciano"></i> contato@ficafrio.com.br</li>
+                        <li><i class="fas fa-map-marker-alt me-2 text-ciano"></i> Três Lagoas - MS</li>
+                    </ul>
                 </div>
                 <div class="col-md-2 mb-4">
-                    <h5 class="fw-bold">Navegação</h5>
-                    <ul class="list-unstyled small">
-                        <li><a href="index.html" class="text-white text-decoration-none">Início</a></li>
-                        <li><a href="sobre.html" class="text-white text-decoration-none">Quem Somos</a></li>
-                        <li><a href="servicos.html" class="text-white text-decoration-none">Nossos Serviços</a></li>
-                        <li><a href="contato.html" class="text-white text-decoration-none">Agendamento</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h5 class="fw-bold">Atendimento</h5>
-                     <ul class="list-unstyled small">
-                        <li>(67) 99999-0000 (Emergências)</li>
-                        <li>contato@ficafrio.com.br</li>
-                        <li>Rua da Inovação, 1001 - Região Sul</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h5 class="fw-bold">Certificações</h5>
-                    <ul class="list-unstyled small">
-                        <li>CREA Ativo</li>
-                        <li>Certificação PMOC</li>
-                        <li>Especialização Inverter</li>
-                    </ul>
+                    <h5 class="text-white fw-bold">Social</h5>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/5567999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
             </div>
-            <hr class="my-3 text-gelo-light">
-            <div class="text-center small">
-                <p class="mb-0">© 2024 Fica Frio Climatização Avançada. Todos os direitos reservados. | Tema: Gelado Plus Ultra.</p>
+            <div class="mt-4 border-top pt-3">
+                <p class="small opacity-50">&copy; 2025 Fica Frio Climatização. Operação Continental Plus Ultra.</p>
             </div>
         </div>
     </footer>
 
+    <a href="https://wa.me/5567999999999" class="btn-zap-flutuante" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-    <script>
-        carregarServicos(); 
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
 </body>
 </html>

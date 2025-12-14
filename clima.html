@@ -1,129 +1,186 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="icon" href="jelado-icon.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fica Frio - Clima Local (API Real)</title>
+    <title>Urgência Climática | Fica Frio Plus Ultra (V6.4)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
     <style>
-        .fa-snowflake:before { content: "❄️"; }
+        :root {
+            --alerta-fogo: #cc0000;
+            --azul-profundo: #001f3f;
+            --azul-royal: #003366;
+            --ciano-neon: #00ffff;
+        }
+
+        .bg-hero-clima {
+            background-image: url('gelado-mask.jpeg'); 
+            background-size: cover;
+            background-position: center center;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6); 
+        }
+        
+        .header-full-vh {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .ticker-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            background-color: #ffc107;
+            color: #000;
+            height: 35px;
+            line-height: 35px;
+            z-index: 1050;
+        }
+        .ticker-move {
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .ticker-item {
+            display: inline-block;
+            padding: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .navbar-premium {
+            top: 35px;
+        }
+
+        .bg-azul-profundo { background-color: var(--azul-profundo); }
+        .bg-azul-royal { background-color: var(--azul-royal); }
+        .text-ciano { color: var(--ciano-neon) !important; }
+        .btn-ciano { background-color: var(--ciano-neon) !important; }
+        .ls-2 { letter-spacing: 2px; }
+
+        #temp-atual {
+            color: var(--ciano-neon) !important; 
+        }
+
+        .card-body {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gelo sticky-top" aria-label="Menu principal de navegação">
+
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <div class="ticker-item"><i class="fas fa-exclamation-triangle"></i> CUIDADO: O CALOR ESTÁ ACIMA DE 30°C. AUMENTO NA DEMANDA DE PMOC.</div>
+            <div class="ticker-item"><i class="fas fa-snowflake"></i> RECUPERAÇÃO DE EFICIÊNCIA COMPROVADA: SISTEMAS A/C AGORA PLUS ULTRA.</div>
+            <div class="ticker-item"><i class="fas fa-bolt"></i> EVITE O **VILÃO DA CONTA ALTA**: AGENDE SUA MANUTENÇÃO PREVENTIVA.</div>
+            <div class="ticker-item"><i class="fas fa-phone"></i> PLANTÃO TÁTICO 24H ATIVO: (67) 99999-0000. EMERGÊNCIA É MISSÃO!</div>
+        </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-premium fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bolder" href="index.html">❄️ FICA FRIO | PLUS ULTRA!</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-snowflake text-ciano me-2"></i> FICA FRIO | <span class="text-ciano">PLUS ULTRA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-bold text-uppercase fs-6">
                     <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
-                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="clima.html" aria-current="page">Clima Local</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">O Mestre Gelado</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Arsenal Técnico</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="clima.html">Urgência Climática</a></li>
+                    <li class="nav-item ms-3">
+                        <a href="contato.html" class="btn btn-outline-info rounded-0 fw-bold px-4">ORÇAMENTO AGORA</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <header class="hero-base hero-overlay bg-hero-clima header-full-vh">
+        <div class="container text-center py-5">
+            <h1 class="display-1 fw-bolder text-white text-shadow-dark">MONITORAMENTO CLIMÁTICO GLOBAL</h1>
+            <p class="lead text-ciano ls-2 text-uppercase fw-bold">Acompanhe a temperatura e saiba por que seu ar condicionado precisa estar 100%.</p>
+        </div>
+    </header>
+
     <main class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <h1 class="text-center mb-4 display-4 text-gelo-dark fw-bolder">Termômetro PLUS ULTRA: Seu AC Aguenta?</h1>
-                <p class="text-center lead mb-4">Escolha sua região para ver a temperatura e receba um diagnóstico imediato.</p>
-
-                <div class="card shadow-lg p-4 mb-5 bg-gelo-light">
-                    <form id="form-clima" onsubmit="buscarClima(event)">
-                        <div class="input-group mb-3">
-                            <label class="input-group-text bg-secondary text-white fw-bold" for="cidade-select">SELECIONE</label>
-                            <select class="form-select" id="cidade-select" required aria-label="Selecione a cidade para ver o clima">
+                <div class="card shadow-lg border-0 mb-5">
+                    <div class="card-header bg-azul-profundo text-white py-3">
+                        <h4 class="fw-bold mb-0"><i class="fas fa-satellite-dish me-2"></i> Central de Previsão Plus Ultra</h4>
+                    </div>
+                    <div class="card-body p-4 bg-light">
+                        <p class="text-muted mb-4">Selecione sua região para receber o diagnóstico térmico em tempo real via API Open-Meteo.</p>
+                        
+                        <form id="form-clima" class="d-flex gap-2">
+                            <select class="form-select py-3 fw-bold text-dark border-2 border-info" id="cidade-select" required>
+                                <option selected disabled value="">Carregando cidades...</option>
                             </select>
-                            <button class="btn btn-primary bg-gelo-dark fw-bold" type="submit" id="btn-buscar">
-                                ❄️ BUSCAR TEMPO
+                            <button type="submit" class="btn btn-info fw-bold px-4 text-white" style="background-color: var(--azul-royal); border:none;">
+                                <i class="fas fa-search me-2"></i> VERIFICAR
                             </button>
-                        </div>
-                        <small class="form-text text-muted">Dados em tempo real da API Open-Meteo para justificar a manutenção.</small>
-                    </form>
+                        </form>
+                    </div>
                 </div>
 
-                <div id="resultado-clima" class="card shadow-lg p-5 d-none">
-                    <h2 class="text-center mb-4 text-gelo-dark">Condições Atuais em <span id="cidade-nome-display" class="text-secondary fw-bolder">...</span></h2>
-                    
-                    <div class="row text-center">
-                        <div class="col-md-6 mb-3">
-                            <div class="p-4 border rounded bg-white">
-                                <span class="display-6 text-primary">🌡️</span>
-                                <h4 class="text-gelo-dark fw-bolder mt-2" id="temp-atual">...</h4>
-                                <p class="mb-0 text-muted">Temperatura (°C)</p>
+                <div id="resultado-clima" class="d-none">
+                    <div class="card shadow border-0 text-center bg-azul-profundo text-white">
+                        <div class="card-body p-5">
+                            <h2 class="fw-bold">Condições Atuais em <span id="cidade-nome-display" class="text-ciano">...</span></h2>
+                            <div class="row mt-5">
+                                <div class="col-6 border-end border-secondary">
+                                    <i class="fas fa-thermometer-half fa-4x mb-3"></i>
+                                    <h3 class="display-4 fw-bold mb-0" id="temp-atual">--°C</h3>
+                                    <small class="text-light opacity-75 text-uppercase ls-2">Temperatura</small>
+                                </div>
+                                <div class="col-6">
+                                    <i class="fas fa-wind fa-4x text-info mb-3"></i>
+                                    <h3 class="display-4 fw-bold mb-0 text-ciano" id="vento-atual">-- km/h</h3>
+                                    <small class="text-light opacity-75 text-uppercase ls-2">Vento</small>
+                                </div>
+                            </div>
+                            <div id="alerta-clima" class="alert alert-warning fw-bold mt-4 d-none">
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="p-4 border rounded bg-white">
-                                <span class="display-6 text-primary">💨</span>
-                                <h4 class="text-gelo-dark fw-bolder mt-2" id="vento-atual">...</h4>
-                                <p class="mb-0 text-muted">Velocidade do Vento (km/h)</p>
-                            </div>
+                        <div class="card-footer bg-azul-royal py-3">
+                            <a href="contato.html" class="btn btn-ciano fw-bold text-dark px-5">AGENDAR MANUTENÇÃO PREVENTIVA AGORA</a>
                         </div>
                     </div>
-
-                    <div id="alerta-clima" class="alert mt-4 d-none fw-bold" role="alert"></div>
                 </div>
+                
+                <div id="erro-clima" class="alert alert-danger fw-bold d-none mt-3">
+                    <i class="fas fa-exclamation-triangle me-2"></i> Não foi possível conectar ao satélite meteorológico. Verifique sua conexão ou tente novamente mais tarde.
+                   </div>
 
-                <div id="erro-clima" class="alert alert-danger d-none mt-4" role="alert">
-                    Não foi possível buscar os dados do clima. Tente novamente mais tarde.
-                </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-gelo text-white pt-5 pb-3 mt-auto">
+    <footer class="footer-premium pt-5 pb-3 mt-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5 class="text-secondary fw-bolder">FICA FRIO | PLUS ULTRA</h5>
-                    <p class="small">A climatização levada ao máximo. **Seu Conforto é a Nossa Missão.**</p>
-                    <p class="small">Atendimento 24h para emergências (com contrato PMOC).</p>
-                </div>
-                <div class="col-md-2 mb-4">
-                    <h5 class="fw-bold">Navegação</h5>
-                    <ul class="list-unstyled small">
-                        <li><a href="index.html" class="text-white text-decoration-none">Início</a></li>
-                        <li><a href="sobre.html" class="text-white text-decoration-none">Quem Somos</a></li>
-                        <li><a href="servicos.html" class="text-white text-decoration-none">Nossos Serviços</a></li>
-                        <li><a href="contato.html" class="text-white text-decoration-none">Agendamento</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h5 class="fw-bold">Atendimento</h5>
-                     <ul class="list-unstyled small">
-                        <li>(67) 99999-0000 (Emergências)</li>
-                        <li>contato@ficafrio.com.br</li>
-                        <li>Rua da Inovação, 1001 - Região Sul</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h5 class="fw-bold">Certificações</h5>
-                    <ul class="list-unstyled small">
-                        <li>CREA Ativo</li>
-                        <li>Certificação PMOC</li>
-                        <li>Especialização Inverter</li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="my-3 text-gelo-light">
-            <div class="text-center small">
-                <p class="mb-0">© 2024 Fica Frio Climatização Avançada. Todos os direitos reservados. | Tema: Gelado Plus Ultra.</p>
+            <div class="text-center small opacity-50">
+                &copy; 2025 Fica Frio Climatização. Operação Continental Plus Ultra. Todos os direitos reservados.
             </div>
         </div>
     </footer>
 
+    <a href="https://wa.me/5567999999999" class="btn-zap-flutuante" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-    <script>
-        prepararClima(); 
-    </script>
+    <script src="script.js"></script> 
+    
 </body>
 </html>
